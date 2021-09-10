@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 	public int countPoints; 
 	public int fasterInt;	
     public Text distance;
+    public int distanceTxtDiff;
+    public string distanceTxt;
 	public GameObject paddle;		//The paddle game object
 	public GameObject ball;			//The ball game object
 	public GameUI gameUI;			//The GameUI class
@@ -38,7 +40,10 @@ public class GameManager : MonoBehaviour
 	public bool goingRight;
 	public bool goingLeft;
 	public bool environmentCreated;
+	public bool fleet_created;
 	public int goingDown;
+	public int pointsTxtDiff;
+	public string pointsTxt;
 	private int tick;
 	private float tickTimer;
 	float time;
@@ -47,13 +52,14 @@ public class GameManager : MonoBehaviour
 
 	void Start ()
 	{
+
 		StartGame();
-		
 		
 	}
 
 	public void StartGame ()
 	{		
+		fleet_created = false;
 		time = 0.0f;
 		tick = 0;
 		score = 0;
@@ -63,8 +69,8 @@ public class GameManager : MonoBehaviour
 		wonGame = false;
 		paddle.active = true;
 		ball.active = true;
-		distance.text = "0 mts.";
-		points.text = "0 pts.";
+		distance.text = "0000000";
+		points.text = "0000000";
 		paddle.GetComponent<Paddle>().ResetPaddle();
 		environmentCreated = false;
 		
@@ -72,14 +78,17 @@ public class GameManager : MonoBehaviour
 
 	void Update () 
 	{
-		createEnvironment ();
 
+		createEnvironment ();
 
 		time += Time.deltaTime; 
 		
-        if (Random.Range(0,1000) == 1 && time >= 5) { // Condición para generar enemigos	
+        if ((Random.Range(0,1000) == 1 && time >= 5) && !fleet_created) { // Condición para generar enemigos	
+
+			fleet_created = true;
             createEnemy ();
             time = 0.0f;
+
         }  
 
 		tickTimer += Time.deltaTime;
@@ -114,18 +123,37 @@ public class GameManager : MonoBehaviour
 		// 	spaceObjSpeed += (countPoints + timerSec)/1000;
 		// }
 
-		UpdateDistance();
+		UpdateScoreboard();
 		
 	}
 
 	public void UpdatePoints () {
 
-		points.text = countPoints.ToString() + " pts.";
+		pointsTxt = "";
+		for (pointsTxtDiff =  7 - score.ToString().Length; pointsTxtDiff > 0; pointsTxtDiff--) {
+
+			pointsTxt += "0";
+
+		}
+
+		pointsTxt += score.ToString();
+		points.text = pointsTxt;
+		
 	}
 
-	public void UpdateDistance () {
+	public void UpdateScoreboard () {
+
 		timerSec = (int)timer;
-        distance.text = timerSec.ToString() + " mts.";
+
+		distanceTxt = "";
+		for (distanceTxtDiff =  7 - timerSec.ToString().Length; distanceTxtDiff > 0; distanceTxtDiff--) {
+
+			distanceTxt += "0";
+
+		}
+
+		distanceTxt += timerSec.ToString();
+        distance.text = distanceTxt;
 	}
 
     void createEnemy () {

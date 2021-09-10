@@ -12,6 +12,8 @@ public class Enemy_Behaviour : MonoBehaviour
     Rigidbody2D rb; 
     Vector3 stepVector;
     public bool sideTouched;
+    public bool fleet_created;
+    public int enemyPoints;
     
     void Start()
     {
@@ -27,6 +29,8 @@ public class Enemy_Behaviour : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
 
         gameObject.name = "spaceship"+spriteArray[enemySprite].ToString().Split('_')[1];
+        // int.TryParse(spriteArray[enemySprite].ToString().Split('_')[1], out enemyPoints);
+        enemyPoints = System.Convert.ToInt32(spriteArray[enemySprite].ToString().Split('_')[1].Split(' ')[0]);
 
     }
 
@@ -52,11 +56,17 @@ public class Enemy_Behaviour : MonoBehaviour
         else if (transform.position.x > -2.6f || transform.position.x < 2.6f) {
 
             sideTouched = false;
-        }  
+        }
+
+        if (transform.position.y < 4.8f) {
+
+            manager.fleet_created = false;
+
+        }
         
         gameObject.GetComponent<Enemy_Behaviour>().direction = new Vector3(gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValue, gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValueY, 0);
   
-        if (time >= 0.01f) {
+        if (time >= 0.1f) {
 
             stepVector = manager.enemySpeed * gameObject.GetComponent<Enemy_Behaviour>().direction;
             rb.velocity = stepVector;
@@ -77,9 +87,9 @@ public class Enemy_Behaviour : MonoBehaviour
 
             if (ball != null) {
                 Destroy(gameObject);
-                manager.countPoints += 100;
-                manager.UpdatePoints();
                 ball.SetDirection(transform.position);
+                manager.score += enemyPoints;
+                manager.UpdatePoints();
             }
             
         }
