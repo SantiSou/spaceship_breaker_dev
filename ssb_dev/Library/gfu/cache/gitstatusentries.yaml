@@ -1,0 +1,1038 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 6
+  lastUpdatedAtString: 2021-09-09T23:19:11.463-03:00
+  initializedAtString: 2021-09-09T23:17:59.076-03:00
+  entries:
+  - path: ssb_dev\Library\ArtifactDB
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ArtifactDB
+    projectPath: Library\ArtifactDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Artifacts\03\0326bd85c2ff093c8247ac3587254b02
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\03\0326bd85c2ff093c8247ac3587254b02
+    projectPath: Library\Artifacts\03\0326bd85c2ff093c8247ac3587254b02
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\0c\0cb17653f9237ca8bd42c03fa98945fd
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0c\0cb17653f9237ca8bd42c03fa98945fd
+    projectPath: Library\Artifacts\0c\0cb17653f9237ca8bd42c03fa98945fd
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\0c\0ccc8f6623fdf3b35cfb87fd4f03ed83
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0c\0ccc8f6623fdf3b35cfb87fd4f03ed83
+    projectPath: Library\Artifacts\0c\0ccc8f6623fdf3b35cfb87fd4f03ed83
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\0f\0fadb4268000312e1982fe05e00d73fc
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0f\0fadb4268000312e1982fe05e00d73fc
+    projectPath: Library\Artifacts\0f\0fadb4268000312e1982fe05e00d73fc
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\18\1847201de19de422c09b1d8ced0ff6b4
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\18\1847201de19de422c09b1d8ced0ff6b4
+    projectPath: Library\Artifacts\18\1847201de19de422c09b1d8ced0ff6b4
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\1b\1b98a1100742107d0cdf448920fe725d
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\1b\1b98a1100742107d0cdf448920fe725d
+    projectPath: Library\Artifacts\1b\1b98a1100742107d0cdf448920fe725d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\1b\1bfb30e96155d54e9b0c03864207a5f5
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\1b\1bfb30e96155d54e9b0c03864207a5f5
+    projectPath: Library\Artifacts\1b\1bfb30e96155d54e9b0c03864207a5f5
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\21\216d5c2b2820e2798d7128e0f9170025
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\21\216d5c2b2820e2798d7128e0f9170025
+    projectPath: Library\Artifacts\21\216d5c2b2820e2798d7128e0f9170025
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\26\2659d0e4f916c896c104e6f8c97651e2
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\26\2659d0e4f916c896c104e6f8c97651e2
+    projectPath: Library\Artifacts\26\2659d0e4f916c896c104e6f8c97651e2
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\27\27725ca2df58ae328783a9d9689df76b
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\27\27725ca2df58ae328783a9d9689df76b
+    projectPath: Library\Artifacts\27\27725ca2df58ae328783a9d9689df76b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\2b\2bba97b995c94cbd2f30f1490967cf0e
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\2b\2bba97b995c94cbd2f30f1490967cf0e
+    projectPath: Library\Artifacts\2b\2bba97b995c94cbd2f30f1490967cf0e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\34\34be90f5518b6a984a6e39c3a9138b57
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\34\34be90f5518b6a984a6e39c3a9138b57
+    projectPath: Library\Artifacts\34\34be90f5518b6a984a6e39c3a9138b57
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\36\36278dadc7d8c971ed17f5e5fe5855ee
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\36\36278dadc7d8c971ed17f5e5fe5855ee
+    projectPath: Library\Artifacts\36\36278dadc7d8c971ed17f5e5fe5855ee
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\36\36799508b36a0a71ebb778473d434007
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\36\36799508b36a0a71ebb778473d434007
+    projectPath: Library\Artifacts\36\36799508b36a0a71ebb778473d434007
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\38\385f5c3200a69c8e479954134502cafd
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\38\385f5c3200a69c8e479954134502cafd
+    projectPath: Library\Artifacts\38\385f5c3200a69c8e479954134502cafd
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\40\40e728298f6ec7aaff15a31059a5cfd6
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\40\40e728298f6ec7aaff15a31059a5cfd6
+    projectPath: Library\Artifacts\40\40e728298f6ec7aaff15a31059a5cfd6
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\41\41c0d6fe457a0de225d0a25ba4239505
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\41\41c0d6fe457a0de225d0a25ba4239505
+    projectPath: Library\Artifacts\41\41c0d6fe457a0de225d0a25ba4239505
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\4f\4f6f0064dbd8e1dcf0a35ffacde5f34a
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\4f\4f6f0064dbd8e1dcf0a35ffacde5f34a
+    projectPath: Library\Artifacts\4f\4f6f0064dbd8e1dcf0a35ffacde5f34a
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\51\51fe36b3b54c6240d39ae4690816ecfc
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\51\51fe36b3b54c6240d39ae4690816ecfc
+    projectPath: Library\Artifacts\51\51fe36b3b54c6240d39ae4690816ecfc
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\58\584ca777517777fef3c12066b7b9a7c7
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\58\584ca777517777fef3c12066b7b9a7c7
+    projectPath: Library\Artifacts\58\584ca777517777fef3c12066b7b9a7c7
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\68\6855d1a6f9a2ebe8a19a95594ec3c99e
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\68\6855d1a6f9a2ebe8a19a95594ec3c99e
+    projectPath: Library\Artifacts\68\6855d1a6f9a2ebe8a19a95594ec3c99e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\6a\6aa713ec14d5e785a533eb8665374837
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\6a\6aa713ec14d5e785a533eb8665374837
+    projectPath: Library\Artifacts\6a\6aa713ec14d5e785a533eb8665374837
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\6b\6bd6e3f4afdebb8037ef7e5640d539a5
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\6b\6bd6e3f4afdebb8037ef7e5640d539a5
+    projectPath: Library\Artifacts\6b\6bd6e3f4afdebb8037ef7e5640d539a5
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\6d\6d502caea1638855ec532a514f21e364
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\6d\6d502caea1638855ec532a514f21e364
+    projectPath: Library\Artifacts\6d\6d502caea1638855ec532a514f21e364
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\6e\6e1da74d5a26ad149620184a5df3bc06
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\6e\6e1da74d5a26ad149620184a5df3bc06
+    projectPath: Library\Artifacts\6e\6e1da74d5a26ad149620184a5df3bc06
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\7e\7edb635df9c67f8b1ec8acc4c8f17fea
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\7e\7edb635df9c67f8b1ec8acc4c8f17fea
+    projectPath: Library\Artifacts\7e\7edb635df9c67f8b1ec8acc4c8f17fea
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\81\8164a8f1b07640e1e898e9a166dc2ecd
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\81\8164a8f1b07640e1e898e9a166dc2ecd
+    projectPath: Library\Artifacts\81\8164a8f1b07640e1e898e9a166dc2ecd
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\88\88f2fc4e7d6d6d79730c53313bf28772
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\88\88f2fc4e7d6d6d79730c53313bf28772
+    projectPath: Library\Artifacts\88\88f2fc4e7d6d6d79730c53313bf28772
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\96\961e1255af815d6ed0f038787bdcaa2c
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\96\961e1255af815d6ed0f038787bdcaa2c
+    projectPath: Library\Artifacts\96\961e1255af815d6ed0f038787bdcaa2c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\96\962483bfb8e16b43f3548da541f83e80
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\96\962483bfb8e16b43f3548da541f83e80
+    projectPath: Library\Artifacts\96\962483bfb8e16b43f3548da541f83e80
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\9a\9aea319e4bf6907e7ca28285cb298006
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9a\9aea319e4bf6907e7ca28285cb298006
+    projectPath: Library\Artifacts\9a\9aea319e4bf6907e7ca28285cb298006
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\9c\9cc8d7b56844cc390e908d89544c6f6d
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9c\9cc8d7b56844cc390e908d89544c6f6d
+    projectPath: Library\Artifacts\9c\9cc8d7b56844cc390e908d89544c6f6d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\9d\9df13e833302d94fd8c19fac5ac92891
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9d\9df13e833302d94fd8c19fac5ac92891
+    projectPath: Library\Artifacts\9d\9df13e833302d94fd8c19fac5ac92891
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\9e\9ececb0ca7345bf443a235a7b62d566e
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9e\9ececb0ca7345bf443a235a7b62d566e
+    projectPath: Library\Artifacts\9e\9ececb0ca7345bf443a235a7b62d566e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\a5\a590633ec6178f36c21b11fcbeae2d0b
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\a5\a590633ec6178f36c21b11fcbeae2d0b
+    projectPath: Library\Artifacts\a5\a590633ec6178f36c21b11fcbeae2d0b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\ac\acacd65c28cb45a400ef0cf93b860b6c
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\ac\acacd65c28cb45a400ef0cf93b860b6c
+    projectPath: Library\Artifacts\ac\acacd65c28cb45a400ef0cf93b860b6c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\ac\acc51c7eaa6a755737b3c4d1a256b322
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\ac\acc51c7eaa6a755737b3c4d1a256b322
+    projectPath: Library\Artifacts\ac\acc51c7eaa6a755737b3c4d1a256b322
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\c4\c41d4b48649f1d69799e70534913b8a5
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c4\c41d4b48649f1d69799e70534913b8a5
+    projectPath: Library\Artifacts\c4\c41d4b48649f1d69799e70534913b8a5
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\c6\c62e6d560188ccbe35cfb3b26f2ceb89
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c6\c62e6d560188ccbe35cfb3b26f2ceb89
+    projectPath: Library\Artifacts\c6\c62e6d560188ccbe35cfb3b26f2ceb89
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\c8\c8d17f890d615d832962a92373f7593c
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c8\c8d17f890d615d832962a92373f7593c
+    projectPath: Library\Artifacts\c8\c8d17f890d615d832962a92373f7593c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\cd\cd66f3797840ea4d38fddbb3b99f53a9
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\cd\cd66f3797840ea4d38fddbb3b99f53a9
+    projectPath: Library\Artifacts\cd\cd66f3797840ea4d38fddbb3b99f53a9
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\d2\d2ca1819dd7ab4bb785ff33026dd4555
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d2\d2ca1819dd7ab4bb785ff33026dd4555
+    projectPath: Library\Artifacts\d2\d2ca1819dd7ab4bb785ff33026dd4555
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\d7\d75643d8d7685ecd39c9f1b1547031ae
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d7\d75643d8d7685ecd39c9f1b1547031ae
+    projectPath: Library\Artifacts\d7\d75643d8d7685ecd39c9f1b1547031ae
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\d8\d89b02ef0e3801136c5ef7c690adc581
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d8\d89b02ef0e3801136c5ef7c690adc581
+    projectPath: Library\Artifacts\d8\d89b02ef0e3801136c5ef7c690adc581
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\da\da8675b194006255cb2ba3c14927f269
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\da\da8675b194006255cb2ba3c14927f269
+    projectPath: Library\Artifacts\da\da8675b194006255cb2ba3c14927f269
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\dd\dd7752d245fdb0c43a128f91f6657452
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\dd\dd7752d245fdb0c43a128f91f6657452
+    projectPath: Library\Artifacts\dd\dd7752d245fdb0c43a128f91f6657452
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\e0\e0d651d6128a436f94353f450fc6a7a7
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e0\e0d651d6128a436f94353f450fc6a7a7
+    projectPath: Library\Artifacts\e0\e0d651d6128a436f94353f450fc6a7a7
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\e6\e64261ce3b3cd95f9d32e3fbaae60fa6
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e6\e64261ce3b3cd95f9d32e3fbaae60fa6
+    projectPath: Library\Artifacts\e6\e64261ce3b3cd95f9d32e3fbaae60fa6
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\ef\ef939625fec3fc03b3ebdcc3e4cfcb86
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\ef\ef939625fec3fc03b3ebdcc3e4cfcb86
+    projectPath: Library\Artifacts\ef\ef939625fec3fc03b3ebdcc3e4cfcb86
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\f6\f67fab7d8925df0978fe16e86df96b32
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\f6\f67fab7d8925df0978fe16e86df96b32
+    projectPath: Library\Artifacts\f6\f67fab7d8925df0978fe16e86df96b32
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\fc\fc1f8df5f4f94cdc589cf6d173953110
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\fc\fc1f8df5f4f94cdc589cf6d173953110
+    projectPath: Library\Artifacts\fc\fc1f8df5f4f94cdc589cf6d173953110
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\fc\fcc9680a0e8bc463cd6de22f8f401f59
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\fc\fcc9680a0e8bc463cd6de22f8f401f59
+    projectPath: Library\Artifacts\fc\fcc9680a0e8bc463cd6de22f8f401f59
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\fe\fe43d7d81f01b7f994bbbef04c9f4633
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Artifacts\fe\fe43d7d81f01b7f994bbbef04c9f4633
+    projectPath: Library\Artifacts\fe\fe43d7d81f01b7f994bbbef04c9f4633
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Bee\900b0aE.dag
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\900b0aE.dag
+    projectPath: Library\Bee\900b0aE.dag
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\900b0aE.dag.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\900b0aE.dag.json
+    projectPath: Library\Bee\900b0aE.dag.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\900b0aE.dag_derived
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\900b0aE.dag_derived
+    projectPath: Library\Bee\900b0aE.dag_derived
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\900b0aE.dag_fsmtime
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\900b0aE.dag_fsmtime
+    projectPath: Library\Bee\900b0aE.dag_fsmtime
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\900b0aE-inputdata.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\900b0aE-inputdata.json
+    projectPath: Library\Bee\900b0aE-inputdata.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Assembly-CSharp-Editor-firstpass.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.CollabProxy.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.PlasticSCM.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.PlasticSCM.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.PlasticSCM.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.PlasticSCM.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.PlasticSCM.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.PlasticSCM.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Rider.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Rider.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Rider.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Rider.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Rider.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Rider.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.TextMeshPro.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.Timeline.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Core.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.Flow.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualScripting.State.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualStudio.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualStudio.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualStudio.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualStudio.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VisualStudio.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VisualStudio.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\Unity.VSCode.Editor.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.TestRunner.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.TestRunner.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEditor.TestRunner.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.TestRunner.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.TestRunner.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEditor.TestRunner.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEditor.UI.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.TestRunner.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.TestRunner.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEngine.TestRunner.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.TestRunner.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.TestRunner.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEngine.TestRunner.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\UnityEngine.UI.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.dll
+    projectPath: Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.dll.movedfrom.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.dll.movedfrom.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.dll.movedfrom.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.rsp
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.rsp
+    projectPath: Library\Bee\artifacts\900b0aE.dag\VSSettingsProvider.rsp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.Plastic.Antlr3.Runtime.dll_5542167794981321716.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.Plastic.Antlr3.Runtime.dll_5542167794981321716.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.Plastic.Antlr3.Runtime.dll_5542167794981321716.movedfrom
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.Plastic.Antlr3.Runtime.dll_7363156928099311223.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.Plastic.Antlr3.Runtime.dll_7363156928099311223.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.Plastic.Antlr3.Runtime.dll_7363156928099311223.movedfrom
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_2282579305488150376.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_2282579305488150376.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_2282579305488150376.movedfrom
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_2455414640403188853.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_2455414640403188853.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_2455414640403188853.movedfrom
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.IonicZip.dll_10856008203347511587.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.IonicZip.dll_10856008203347511587.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.VisualScripting.IonicZip.dll_10856008203347511587.movedfrom
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.IonicZip.dll_7550825615807836166.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.IonicZip.dll_7550825615807836166.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.VisualScripting.IonicZip.dll_7550825615807836166.movedfrom
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.YamlDotNet.dll_7944405713395015497.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.YamlDotNet.dll_7944405713395015497.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.VisualScripting.YamlDotNet.dll_7944405713395015497.movedfrom
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.YamlDotNet.dll_8117241048310053974.movedfrom
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\artifacts\movedfrom\Unity.VisualScripting.YamlDotNet.dll_8117241048310053974.movedfrom
+    projectPath: Library\Bee\artifacts\movedfrom\Unity.VisualScripting.YamlDotNet.dll_8117241048310053974.movedfrom
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Bee\profiler.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\profiler.json
+    projectPath: Library\Bee\profiler.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\tundra.digestcache
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\tundra.digestcache
+    projectPath: Library\Bee\tundra.digestcache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\tundra.log.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\tundra.log.json
+    projectPath: Library\Bee\tundra.log.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\TundraBuildState.state
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\TundraBuildState.state
+    projectPath: Library\Bee\TundraBuildState.state
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\Bee\TundraBuildState.state.map
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\Bee\TundraBuildState.state.map
+    projectPath: Library\Bee\TundraBuildState.state.map
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\EditorInstance.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\gfu\cache\gitlocks.yaml
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\gfu\cache\gitlocks.yaml
+    projectPath: Library\gfu\cache\gitlocks.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\gfu\cache\repoinfo.yaml
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\PackageManager\ProjectCache
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\PackageManager\ProjectCache
+    projectPath: Library\PackageManager\ProjectCache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\PackageManager\ProjectCache.md5
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\PackageManager\ProjectCache.md5
+    projectPath: Library\PackageManager\ProjectCache.md5
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\SceneVisibilityState.asset
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\SceneVisibilityState.asset
+    projectPath: Library\SceneVisibilityState.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Assembly-CSharp.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Assembly-CSharp.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.Rider.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.Timeline.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.Timeline.dll
+    projectPath: Library\ScriptAssemblies\Unity.Timeline.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+    projectPath: Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\UnityEditor.UI.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\UnityEditor.UI.dll
+    projectPath: Library\ScriptAssemblies\UnityEditor.UI.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+    projectPath: Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\UnityEngine.UI.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\UnityEngine.UI.dll
+    projectPath: Library\ScriptAssemblies\UnityEngine.UI.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\ScriptAssemblies\VSSettingsProvider.dll
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\ScriptAssemblies\VSSettingsProvider.dll
+    projectPath: Library\ScriptAssemblies\VSSettingsProvider.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\SourceAssetDB
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\SourceAssetDB
+    projectPath: Library\SourceAssetDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    projectPath: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    projectPath: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Logs\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Logs\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Logs\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Temp\__Backupscenes\0.backup
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Temp\__Backupscenes\0.backup
+    projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Temp\UnityLockfile
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Temp\UnityLockfile
+    projectPath: Temp\UnityLockfile
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Temp\workerlic
+    fullPath: E:\Users\Santiago\Desktop\Unity-Projects\spaceship_breaker_dev\ssb_dev\Temp\workerlic
+    projectPath: Temp\workerlic
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
