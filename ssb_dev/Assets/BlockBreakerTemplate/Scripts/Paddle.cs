@@ -117,12 +117,14 @@ public class Paddle : MonoBehaviour
 		{
 			copyCreated = true;
 			GameObject paddleCopy = Instantiate(paddlePrototype);
+			paddleCopy.name = gameObject.name;
 			paddleCopy.transform.position = new Vector3(3.38f, transform.position.y, 0);		
 		}
 		else if (transform.position.x > maxX && !copyCreated)
 		{
 			copyCreated = true;
 			GameObject paddleCopy = Instantiate(paddlePrototype);
+			paddleCopy.name = gameObject.name;
 			paddleCopy.transform.position = new Vector3(-3.38f, transform.position.y, 0);		
 		}
 

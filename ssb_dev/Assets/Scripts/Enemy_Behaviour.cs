@@ -66,22 +66,22 @@ public class Enemy_Behaviour : MonoBehaviour
         
         gameObject.GetComponent<Enemy_Behaviour>().direction = new Vector3(gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValue, gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValueY, 0);
   
-        if (time >= 0.1f) {
+        // if (time >= 1f) {
 
-            stepVector = manager.enemySpeed * gameObject.GetComponent<Enemy_Behaviour>().direction;
-            rb.velocity = stepVector;
-            time = 0.0f;            
+        stepVector = manager.enemySpeed * gameObject.GetComponent<Enemy_Behaviour>().direction;
+        rb.velocity = stepVector;
+        // time = 0.0f;            
 
-        }
-        else {
+        // }
+        // else {
 
-            stepVector = 0 * gameObject.GetComponent<Enemy_Behaviour>().direction;
-            rb.velocity = stepVector;
-        }
+            // stepVector = 0 * gameObject.GetComponent<Enemy_Behaviour>().direction;
+            // rb.velocity = stepVector;
+        // }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.name.Equals("ball_test")) {
+        if (other.gameObject.name.Equals("ball_test(Clone)")) {
 
             Ball ball = other.gameObject.GetComponent<Ball>();
 

@@ -9,10 +9,10 @@ public class init_MainCamera : MonoBehaviour
     
     void Start()
     {
-        cam = GetComponent<Camera>();
-        Vector3 screenPos = cam.WorldToScreenPoint(target.position);
-		print(screenPos.x);
-		print(screenPos.y);
+        // cam = GetComponent<Camera>();
+        // Vector3 screenPos = cam.WorldToScreenPoint(target.position);
+		// print(screenPos.x);
+		// print(screenPos.y);
         // Screen.orientation = ScreenOrientation.LandscapeLeft;
         // Screen.orientation = ScreenOrientation.Portrait;
     }

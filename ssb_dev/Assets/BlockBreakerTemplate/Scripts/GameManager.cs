@@ -9,14 +9,17 @@ public class GameManager : MonoBehaviour
 	public int lives;				//The amount of lives the player has remaining
 	public int ballSpeedIncrement;	//The amount of speed the ball will increase by everytime it hits a brick
 	public int ballmaxSpeed;
-	int timerSec;
+	public int timerSec;
 	public float faster;
 	public float spaceObjSpeed;
 	public float spaceObjxPos;
 	public float spaceObjScale;	
 	public float enemySpeed;
 	public float ballSpeed;
-	float timer;
+	public float timer_keyDown;
+	public float timer;
+	public float tickTimer;
+	public float time;
 	public bool gameOver;			//Set true when the game is over
 	public bool wonGame;			//Set true when the game has been won
 	public bool isFaster;
@@ -26,8 +29,8 @@ public class GameManager : MonoBehaviour
     public Text distance;
     public int distanceTxtDiff;
     public string distanceTxt;
-	public GameObject paddle;		//The paddle game object
-	public GameObject ball;			//The ball game object
+	public GameObject paddlePrototype;		//The paddle game object
+	public GameObject ballPrototype;			//The ball game object
 	public GameUI gameUI;			//The GameUI class
 	public GameObject brickPrefab;	//The prefab of the Brick game object which will be spawned
 	public GameObject enemyPrototype;
@@ -41,12 +44,11 @@ public class GameManager : MonoBehaviour
 	public bool goingLeft;
 	public bool environmentCreated;
 	public bool fleet_created;
+	public bool ballCreated;
 	public int goingDown;
 	public int pointsTxtDiff;
 	public string pointsTxt;
 	private int tick;
-	private float tickTimer;
-	float time;
     int enemyArray;
 	
 
@@ -59,6 +61,8 @@ public class GameManager : MonoBehaviour
 
 	public void StartGame ()
 	{		
+		GameObject paddle = Instantiate(paddlePrototype);
+		ballCreated = false;
 		fleet_created = false;
 		time = 0.0f;
 		tick = 0;
@@ -68,10 +72,10 @@ public class GameManager : MonoBehaviour
 		gameOver = false;
 		wonGame = false;
 		paddle.active = true;
-		ball.active = true;
+		ballPrototype.active = true;
 		distance.text = "0000000";
 		points.text = "0000000";
-		paddle.GetComponent<Paddle>().ResetPaddle();
+		
 		environmentCreated = false;
 		
 	}
@@ -95,27 +99,71 @@ public class GameManager : MonoBehaviour
 
         if (!isFaster) {
             timer += Time.deltaTime;		
-        } else
-            timer += (Time.deltaTime*3);
+        } //else
+         //   timer += (Time.deltaTime*3);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            if (!isFaster) {
-				isFaster = true;
-                spaceObjSpeed += faster;
-				enemySpeed += faster;	
-				// ballSpeedIncrement += fasterInt;
-				// ball.GetComponent<Ball>().GoingFaster();
-            }
+        if (Input.GetKey(KeyCode.UpArrow)) {
+
+			timer_keyDown += Time.deltaTime;
+
+			if (!ballCreated) {
+				ballCreated = true;
+				createBall();
+			}
+
+			// if (timer_keyDown < 1.0f) {
+
+			// 	foreach (object o in obj)
+			// 	{
+			// 		GameObject paddleObject = (GameObject) o;
+			// 		if (ballObject.name == "ball_test(Clone)") {
+
+			// 			ballObject.Destroy();
+
+			// 		}	
+			// 	}				
+			// }
+
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            if (isFaster) {
-				isFaster = false;
-                spaceObjSpeed -= faster;
-				enemySpeed -= faster;
-				// ball.GetComponent<Ball>().GoingFaster();
+		else if (Input.GetKeyUp(KeyCode.UpArrow)) {
+
+				object[] obj = GameObject.FindObjectsOfType(typeof (GameObject));
+
+				foreach (object o in obj)
+				{
+
+					GameObject gameObject = (GameObject) o;
+					
+					if (gameObject.name == "ball_test(Clone)") {
+						
+						if (timer_keyDown < 1.0f && !gameObject.GetComponent<Ball>().ballGenerated) {
+							Destroy(gameObject);
+						}
+						else {
+							gameObject.GetComponent<Ball>().ballGenerated = true;
+						}
+
+					}	
+				}
+
+				ballCreated = false;
+				timer_keyDown = 0.0f;
+		}
+		
+		// else if (Input.GetKey(KeyCode.UpArrow)) {
+
+		// 	timer_keyDown = 0.0f;
+
+		// }
+        // if (Input.GetKeyDown(KeyCode.DownArrow)) {
+        //     if (isFaster) {
+		// 		isFaster = false;
+        //         spaceObjSpeed -= faster;
+		// 		enemySpeed -= faster;
+		// 		// ball.GetComponent<Ball>().GoingFaster();
                 
-            }
-        }
+        //     }
+        // }
 
 		// if (tickTimer >= 1) {
 		// 	tickTimer -= 1;
@@ -154,6 +202,22 @@ public class GameManager : MonoBehaviour
 
 		distanceTxt += timerSec.ToString();
         distance.text = distanceTxt;
+	}
+
+    void createBall () {
+
+		object[] obj = GameObject.FindObjectsOfType(typeof (GameObject));
+
+		foreach (object o in obj)
+		{
+			GameObject paddleObject = (GameObject) o;
+			if (paddleObject.name == "block_test(Clone)") {
+
+				GameObject ballObject = Instantiate(ballPrototype);
+
+				ballObject.transform.position = new Vector3(paddleObject.transform.position.x, -3.1f, 0);
+			}	
+		}			
 	}
 
     void createEnemy () {
