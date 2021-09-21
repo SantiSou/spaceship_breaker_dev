@@ -124,8 +124,8 @@ MonoBehaviour:
   maxSpeed: 5000
   speedFactor: 1500
   slowFactor: 500
-  minX: -2.25
-  maxX: 2.25
+  minX: -2.6
+  maxX: 2.56
   inertia: 450
   controlTapR: 0
   controlTapL: 0
@@ -141,6 +141,7 @@ MonoBehaviour:
   rig: {fileID: 6258259880435836694}
   ball: {fileID: 0}
   paddlePrototype: {fileID: 6258259880431877406}
+  ballGenerated: 0
 --- !u!61 &6258259880267780552
 BoxCollider2D:
   m_ObjectHideFlags: 0

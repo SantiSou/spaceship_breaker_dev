@@ -20,37 +20,37 @@ public class Ball : MonoBehaviour
 	{
 		ballGenerated = false;
 		goingFaster = false;
-		manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
-		// transform.position = Vector3.zero;		//Sets the ball position to the middle of the screen
-		direction = Vector2.up;				//Sets the ball's direction to go down
-		// StartCoroutine("ResetBallWaiter");		//Starts the 'ResetBallWaiter' coroutine to have the ball wait 1 second before moving
+		manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();   
+		direction = Vector2.up;				
 	}
 
 	void Update ()
 	{
 
 		if (ballGenerated) {
+
+			gameObject.transform.SetParent(null);
 			rig.velocity = direction * manager.ballSpeed * Time.deltaTime; //Sets the object's rigidbody velocity to the direction multiplied by the speed
 
-			if(transform.position.x > 2.6f && !goingLeft){					//Is the ball at the right border and is not going left (heading towards the right border)
+			if(transform.position.x > ((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x)*-1) && !goingLeft){					//Is the ball at the right border and is not going left (heading towards the right border)
 				direction = new Vector2(-direction.x, direction.y);		//Set the ball's x direction to the opposite so that it moves away from the right border (bouncing look)
 				goingLeft = true;										//Sets goingLeft to true as the ball is now moving left
 			}
-			if(transform.position.x < -2.6 && goingLeft){					//Is the ball at the left border and is going left (heading towards the left border)
+			if(transform.position.x < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x) && goingLeft){					//Is the ball at the left border and is going left (heading towards the left border)
 				direction = new Vector2(-direction.x, direction.y);		//Set the ball's x direction to the opposite so that it moves away from the left border (bouncing look)
 				goingLeft = false;										//Sets goingLeft to false as the ball is now moving right
 			}
-			if(transform.position.y > 4.8f && !goingDown){					//Is the ball at the top border and not going down (heading towards the top border)
+			if(transform.position.y > (((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)*-1)-1.0f) && !goingDown){					//Is the ball at the top border and not going down (heading towards the top border)
 				direction = new Vector2(direction.x, -direction.y);		//Set the ball's y direction to the opposite so that it moves away from the top border (bouncing look)
 				goingDown = true;										//Sets goingDown to true as the ball is now moving down
 			}
-			if(transform.position.y < -5){								//Has the ball gone down past the paddle
+			if(transform.position.y < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)){								//Has the ball gone down past the paddle
 				Destroy(gameObject);											//Call the 'ResetBall()' function to reset the ball in the middle of the screen
 			}		
 		}
 		else {
-			paddle = GameObject.Find("block_test(Clone)").GetComponent<Paddle> ();
-			gameObject.transform.position = new Vector3(paddle.transform.position.x, -3.1f, 0);
+			
+			gameObject.transform.position = new Vector3(transform.parent.position.x, -3.1f, 0);
 		}
 
 		// GoingFaster()

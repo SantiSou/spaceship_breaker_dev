@@ -60,4 +60,5 @@ crashlytics-build.properties
 
 # Custom paths
 PackageCache/
+Temp/
 

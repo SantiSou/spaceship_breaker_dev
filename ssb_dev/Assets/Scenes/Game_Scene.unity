@@ -655,6 +655,10 @@ MonoBehaviour:
   goingDown: 0
   pointsTxtDiff: 0
   pointsTxt: 
+  minX: 0
+  minXdelete: 0
+  maxX: 0
+  maxXdelete: 0
 --- !u!4 &1035255580
 Transform:
   m_ObjectHideFlags: 0

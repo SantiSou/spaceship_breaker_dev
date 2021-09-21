@@ -14,6 +14,10 @@ public class Fleet_Behaviour : MonoBehaviour
     }
 
     void Update() {
+
+        if (transform.childCount < 1) {
+            Destroy(gameObject);
+        }
     }
 
 }

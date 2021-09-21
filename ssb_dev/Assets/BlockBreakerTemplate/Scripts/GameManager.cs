@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
 	public float ballSpeed;
 	public float timer_keyDown;
 	public float timer;
-	public float tickTimer;
 	public float time;
 	public bool gameOver;			//Set true when the game is over
 	public bool wonGame;			//Set true when the game has been won
@@ -49,7 +48,13 @@ public class GameManager : MonoBehaviour
 	public int pointsTxtDiff;
 	public string pointsTxt;
 	private int tick;
+	public int numberPlayers;
     int enemyArray;
+	public float minX;
+	public float minXdelete;
+	public float maxX;
+	public float maxXdelete;
+	public int actualLevel;
 	
 
 	void Start ()
@@ -62,6 +67,13 @@ public class GameManager : MonoBehaviour
 	public void StartGame ()
 	{		
 		GameObject paddle = Instantiate(paddlePrototype);
+		numberPlayers = 1;
+		minX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+		minXdelete = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+		maxX = (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x * -1) - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+		maxXdelete = (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x * -1) + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+
+		actualLevel = 1;
 		ballCreated = false;
 		fleet_created = false;
 		time = 0.0f;
@@ -82,10 +94,10 @@ public class GameManager : MonoBehaviour
 
 	void Update () 
 	{
+		time += Time.deltaTime;
 
 		createEnvironment ();
-
-		time += Time.deltaTime; 
+		UpdateScoreboard ();
 		
         if ((Random.Range(0,1000) == 1 && time >= 5) && !fleet_created) { // Condición para generar enemigos	
 
@@ -94,8 +106,6 @@ public class GameManager : MonoBehaviour
             time = 0.0f;
 
         }  
-
-		tickTimer += Time.deltaTime;
 
         if (!isFaster) {
             timer += Time.deltaTime;		
@@ -110,20 +120,6 @@ public class GameManager : MonoBehaviour
 				ballCreated = true;
 				createBall();
 			}
-
-			// if (timer_keyDown < 1.0f) {
-
-			// 	foreach (object o in obj)
-			// 	{
-			// 		GameObject paddleObject = (GameObject) o;
-			// 		if (ballObject.name == "ball_test(Clone)") {
-
-			// 			ballObject.Destroy();
-
-			// 		}	
-			// 	}				
-			// }
-
         }
 		else if (Input.GetKeyUp(KeyCode.UpArrow)) {
 
@@ -145,37 +141,20 @@ public class GameManager : MonoBehaviour
 
 					}	
 				}
-
+ 
 				ballCreated = false;
 				timer_keyDown = 0.0f;
-		}
-		
-		// else if (Input.GetKey(KeyCode.UpArrow)) {
-
-		// 	timer_keyDown = 0.0f;
-
-		// }
-        // if (Input.GetKeyDown(KeyCode.DownArrow)) {
-        //     if (isFaster) {
-		// 		isFaster = false;
-        //         spaceObjSpeed -= faster;
-		// 		enemySpeed -= faster;
-		// 		// ball.GetComponent<Ball>().GoingFaster();
-                
-        //     }
-        // }
-
-		// if (tickTimer >= 1) {
-		// 	tickTimer -= 1;
-		// 	enemySpeed += (countPoints + timerSec)/1000;
-		// 	spaceObjSpeed += (countPoints + timerSec)/1000;
-		// }
-
-		UpdateScoreboard();
-		
+		}		
 	}
 
 	public void UpdatePoints () {
+
+		if (score > 1000) {
+
+			actualLevel = (int)(score/1000);
+
+		}
+		
 
 		pointsTxt = "";
 		for (pointsTxtDiff =  7 - score.ToString().Length; pointsTxtDiff > 0; pointsTxtDiff--) {
@@ -214,8 +193,9 @@ public class GameManager : MonoBehaviour
 			if (paddleObject.name == "block_test(Clone)") {
 
 				GameObject ballObject = Instantiate(ballPrototype);
-
 				ballObject.transform.position = new Vector3(paddleObject.transform.position.x, -3.1f, 0);
+				ballObject.transform.parent = paddleObject.transform;
+				paddlePrototype = paddleObject;
 			}	
 		}			
 	}
@@ -243,32 +223,15 @@ public class GameManager : MonoBehaviour
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValueY = 0;
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValue = directionValue;
 
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 1; i <= 5; i++) {
 
             GameObject enemyCopy = Instantiate(enemyPrototype);
             enemyCopy.transform.localScale = new Vector3(1f, 1f, 0); 
-            enemyCopy.transform.position = new Vector3(enemyXPos, enemyYPos, -1f);
-            enemyCopy.GetComponent<Enemy_Behaviour>().direction = new Vector3(directionValue, 0, 0);  
-
-        	// enemyArray += 1;
-            // enemyCopy.name = "Array"+enemyArray.ToString();
-
-            switch (i) {
-                case 1:
-                    enemyXPos += 0.5f;
-                    break;
-                case 2:
-                    enemyXPos -= 0.5f;
-                    enemyYPos += 0.5f;
-                    break;
-                case 3:
-                    enemyXPos += 0.5f;
-                    break;
-            }
-
+            enemyCopy.transform.position = new Vector3((transform.localScale.x + enemyCopy.GetComponent<SpriteRenderer>().bounds.size.x), (1Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y * -1), -1f);
+            enemyCopy.GetComponent<Enemy_Behaviour>().direction = new Vector3(directionValue, 0, 0);
+			
 			enemyCopy.transform.parent = fleetObject.transform;
         }
-      
     }	
 
 	void createEnvironment () {
@@ -296,6 +259,7 @@ public class GameManager : MonoBehaviour
 			spaceObjCopy.transform.parent = spaceEnvironment.transform;
         }		
 	}
+
 	//Spawns the bricks and sets their colours
 	// public void CreateBrickArray ()
 	// {

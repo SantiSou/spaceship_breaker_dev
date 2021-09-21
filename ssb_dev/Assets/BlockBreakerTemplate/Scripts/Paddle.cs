@@ -8,7 +8,9 @@ public class Paddle : MonoBehaviour
 	public float speedFactor;	
 	public float slowFactor;	
 	public float minX;				//The minimum x position that the paddle can move to
+	public float minXdelete;				//The minimum x position that the paddle can move to
 	public float maxX;				//The maximum x position that the paddle can move to
+	public float maxXdelete;				//The maximum x position that the paddle can move to
 	public float inertia;
 	public float controlTapR;
 	public float controlTapL;
@@ -24,10 +26,14 @@ public class Paddle : MonoBehaviour
 	public Rigidbody2D rig;			//The paddle's rigidbody 2D component
 	public GameObject ball;
 	public GameObject paddlePrototype;
+	public GameManager manager;
+	public bool ballGenerated;
 
 
 	void Start ()
 	{
+		manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
+		ballGenerated = false;
 	}
 	void Update ()
 	{
@@ -36,7 +42,7 @@ public class Paddle : MonoBehaviour
 			MovementControl();
 			InfinitePaddle();
 
-			transform.position = new Vector3(transform.position.x, transform.position.y, 0);	//Clamps the position so that it doesn't go below the 'minX' or past the 'maxX' values
+			transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
 		}
 	}
@@ -112,26 +118,30 @@ public class Paddle : MonoBehaviour
 	}
 
 	public void InfinitePaddle ()
-	{
-		if(transform.position.x < minX && !copyCreated)
+	{	
+		// print(Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x));		
+		if(transform.position.x < manager.minX && !copyCreated)
 		{
 			copyCreated = true;
 			GameObject paddleCopy = Instantiate(paddlePrototype);
 			paddleCopy.name = gameObject.name;
-			paddleCopy.transform.position = new Vector3(3.38f, transform.position.y, 0);		
+			paddleCopy.transform.position = new Vector3(manager.maxXdelete, transform.position.y, 0);	
+			manager.numberPlayers = 2;
 		}
-		else if (transform.position.x > maxX && !copyCreated)
+		else if (transform.position.x >= manager.maxX && !copyCreated)
 		{
 			copyCreated = true;
 			GameObject paddleCopy = Instantiate(paddlePrototype);
 			paddleCopy.name = gameObject.name;
-			paddleCopy.transform.position = new Vector3(-3.38f, transform.position.y, 0);		
+			paddleCopy.transform.position = new Vector3(manager.minXdelete, transform.position.y, 0);	
+			manager.numberPlayers = 2;	
 		}
 
-		if (transform.position.x < -3.38f || transform.position.x > 3.38f) {
+		if (transform.position.x < manager.minXdelete || transform.position.x > manager.maxXdelete) {
 			Destroy(gameObject);
+			manager.numberPlayers = 1;
 		}
-		else if (transform.position.x > minX && transform.position.x < maxX) {
+		else if (manager.numberPlayers < 2) {
 			copyCreated = false;
 		} 		
 	}
