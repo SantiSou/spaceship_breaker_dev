@@ -20,15 +20,15 @@ public class Enemy_Behaviour : MonoBehaviour
         int enemySprite = Random.Range(0, 7);
         sideTouched = false;
 
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        // spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
         rb = GetComponent<Rigidbody2D> ();
 
-        spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30,36,42      
-        Vector2 sizeSpriteRenderer = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-        gameObject.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
+        // spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30,36,42      
+        // Vector2 sizeSpriteRenderer = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        // gameObject.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
 
-        gameObject.name = "spaceship"+spriteArray[enemySprite].ToString().Split('_')[1];
+        gameObject.name = "spaceship";
         // int.TryParse(spriteArray[enemySprite].ToString().Split('_')[1], out enemyPoints);
         enemyPoints = System.Convert.ToInt32(spriteArray[enemySprite].ToString().Split('_')[1].Split(' ')[0]);
 
@@ -38,27 +38,27 @@ public class Enemy_Behaviour : MonoBehaviour
 
         time += Time.deltaTime;
 
-        if (transform.position.y < -5) {
+        if (transform.position.y < manager.cameraY) {
             Destroy(gameObject);
         }
-        else if (transform.position.x < -2.6f && !sideTouched) {
+        else if (transform.position.x < manager.cameraX && !sideTouched) {
 
             sideTouched = true;
             gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3(gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().transform.position.x, (gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().transform.position.y-0.05f) , 0);
             gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValue = 1;
         }      
-        else if (transform.position.x > 2.6f && !sideTouched) {
+        else if (transform.position.x > (manager.cameraX*-1) && !sideTouched) {
 
             sideTouched = true;
             gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3(gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().transform.position.x, (gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().transform.position.y-0.05f) , 0);
             gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValue = -1;
         }        
-        else if (transform.position.x > -2.6f || transform.position.x < 2.6f) {
+        else if (transform.position.x > (manager.cameraX*-1) || transform.position.x < manager.cameraX) {
 
             sideTouched = false;
         }
 
-        if (transform.position.y < 4.8f) {
+        if (transform.position.y < 4.0f) {
 
             manager.fleet_created = false;
 
@@ -86,12 +86,19 @@ public class Enemy_Behaviour : MonoBehaviour
             Ball ball = other.gameObject.GetComponent<Ball>();
 
             if (ball != null) {
+
                 Destroy(gameObject);
                 ball.SetDirection(transform.position);
-                manager.score += enemyPoints;
+                manager.experience += enemyPoints;
+                manager.score += enemyPoints*10;
                 manager.UpdatePoints();
+                
             }
-            
+        } else if (other.gameObject.name.Equals("spaceship") && !(gameObject.transform.parent==other.transform.parent.transform)) {
+
+            gameObject.transform.parent = other.transform.parent.transform;
+            other.transform.parent.GetComponent<Fleet_Behaviour>().reArrangeFleet();
+
         }
     }    
 }

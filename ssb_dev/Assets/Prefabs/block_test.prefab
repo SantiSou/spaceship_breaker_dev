@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6258259880431877406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2593, y: -3.99, z: 0}
+  m_LocalPosition: {x: 0.435, y: -3.875, z: 0}
   m_LocalScale: {x: 0.20640363, y: 0.20640363, z: 0.20640363}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,7 +125,9 @@ MonoBehaviour:
   speedFactor: 1500
   slowFactor: 500
   minX: -2.6
+  minXdelete: 0
   maxX: 2.56
+  maxXdelete: 0
   inertia: 450
   controlTapR: 0
   controlTapL: 0
@@ -141,6 +143,7 @@ MonoBehaviour:
   rig: {fileID: 6258259880435836694}
   ball: {fileID: 0}
   paddlePrototype: {fileID: 6258259880431877406}
+  manager: {fileID: 0}
   ballGenerated: 0
 --- !u!61 &6258259880267780552
 BoxCollider2D:

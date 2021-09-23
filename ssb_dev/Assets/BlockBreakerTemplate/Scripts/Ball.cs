@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
 				direction = new Vector2(-direction.x, direction.y);		//Set the ball's x direction to the opposite so that it moves away from the left border (bouncing look)
 				goingLeft = false;										//Sets goingLeft to false as the ball is now moving right
 			}
-			if(transform.position.y > (((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)*-1)-1.0f) && !goingDown){					//Is the ball at the top border and not going down (heading towards the top border)
+			if(transform.position.y > (((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)*-1)) && !goingDown){					//Is the ball at the top border and not going down (heading towards the top border)
 				direction = new Vector2(direction.x, -direction.y);		//Set the ball's y direction to the opposite so that it moves away from the top border (bouncing look)
 				goingDown = true;										//Sets goingDown to true as the ball is now moving down
 			}
@@ -95,6 +95,12 @@ public class Ball : MonoBehaviour
 		Destroy(gameObject);
 
 	}
+
+	// public void CreateBall () {
+
+	// 	Destroy(gameObject);
+
+	// }
 
 	//Called to make the ball wait a second before moving. Called when the ball dies and is respawned at the middle of the screen
 	// IEnumerator ResetBallWaiter ()

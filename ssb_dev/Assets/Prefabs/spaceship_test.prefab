@@ -130,6 +130,8 @@ MonoBehaviour:
   direction: {x: 0, y: -1, z: 0}
   manager: {fileID: 0}
   sideTouched: 0
+  fleet_created: 0
+  enemyPoints: 0
 --- !u!50 &2269133625609046926
 Rigidbody2D:
   serializedVersion: 4
@@ -161,7 +163,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

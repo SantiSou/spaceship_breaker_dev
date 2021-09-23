@@ -11,6 +11,7 @@ TagManager:
   - Limit_Left
   - Limit_Right
   - Background
+  - Hud
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour 
 {
 	public int score;				//The player's current score
+	public int experience;
 	public int lives;				//The amount of lives the player has remaining
 	public int ballSpeedIncrement;	//The amount of speed the ball will increase by everytime it hits a brick
 	public int ballmaxSpeed;
@@ -19,12 +20,13 @@ public class GameManager : MonoBehaviour
 	public float timer_keyDown;
 	public float timer;
 	public float time;
+    public float enemyXPos;
+    public float enemyYPos;
 	public bool gameOver;			//Set true when the game is over
 	public bool wonGame;			//Set true when the game has been won
 	public bool isFaster;
 	public Text points;
 	public int countPoints; 
-	public int fasterInt;	
     public Text distance;
     public int distanceTxtDiff;
     public string distanceTxt;
@@ -47,15 +49,20 @@ public class GameManager : MonoBehaviour
 	public int goingDown;
 	public int pointsTxtDiff;
 	public string pointsTxt;
-	private int tick;
 	public int numberPlayers;
     int enemyArray;
 	public float minX;
 	public float minXdelete;
 	public float maxX;
 	public float maxXdelete;
-	public int actualLevel;
-	
+	public int actualLevel;	
+	public float cameraX;
+	public float cameraY;
+    public Sprite[] spriteArray;
+    SpriteRenderer spriteRenderer;
+	AudioSource audioSource;
+	public AudioClip createBallAudio;
+
 
 	void Start ()
 	{
@@ -66,38 +73,34 @@ public class GameManager : MonoBehaviour
 
 	public void StartGame ()
 	{		
-		GameObject paddle = Instantiate(paddlePrototype);
-		numberPlayers = 1;
-		minX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
-		minXdelete = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
-		maxX = (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x * -1) - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
-		maxXdelete = (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x * -1) + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
 
-		actualLevel = 1;
-		ballCreated = false;
-		fleet_created = false;
+		audioSource = gameObject.GetComponent<AudioSource>();
+
 		time = 0.0f;
-		tick = 0;
-		score = 0;
-		lives = 3;
-		fasterInt = (int)faster;
-		gameOver = false;
-		wonGame = false;
-		paddle.active = true;
-		ballPrototype.active = true;
+
+		cameraX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x;
+		cameraY = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y;
+
+		createPadle ();
+
+		environmentCreated 		= false;
+		fleet_created 			= false;
+		ballCreated 			= false;
+		gameOver 				= false;
+		wonGame 				= false;
+
 		distance.text = "0000000";
 		points.text = "0000000";
-		
-		environmentCreated = false;
-		
+		actualLevel = 1;
+		score = 0;
 	}
 
 	void Update () 
 	{
 		time += Time.deltaTime;
 
-		createEnvironment ();
-		UpdateScoreboard ();
+		generateEnvironment ();
+		updateScoreboard ();
 		
         if ((Random.Range(0,1000) == 1 && time >= 5) && !fleet_created) { // Condición para generar enemigos	
 
@@ -118,7 +121,8 @@ public class GameManager : MonoBehaviour
 
 			if (!ballCreated) {
 				ballCreated = true;
-				createBall();
+				audioSource.PlayOneShot(createBallAudio, 0.3f);
+				createBall ();
 			}
         }
 		else if (Input.GetKeyUp(KeyCode.UpArrow)) {
@@ -168,7 +172,7 @@ public class GameManager : MonoBehaviour
 		
 	}
 
-	public void UpdateScoreboard () {
+	public void updateScoreboard () {
 
 		timerSec = (int)timer;
 
@@ -192,10 +196,12 @@ public class GameManager : MonoBehaviour
 			GameObject paddleObject = (GameObject) o;
 			if (paddleObject.name == "block_test(Clone)") {
 
-				GameObject ballObject = Instantiate(ballPrototype);
-				ballObject.transform.position = new Vector3(paddleObject.transform.position.x, -3.1f, 0);
-				ballObject.transform.parent = paddleObject.transform;
-				paddlePrototype = paddleObject;
+				GameObject ballObject 			= Instantiate(ballPrototype);
+				
+				ballObject.transform.position 	= new Vector3(paddleObject.transform.position.x, -3.1f, 0);
+				ballObject.transform.parent 	= paddleObject.transform;
+				paddlePrototype 				= paddleObject;
+				ballObject.active 				= true;
 			}	
 		}			
 	}
@@ -203,9 +209,13 @@ public class GameManager : MonoBehaviour
     void createEnemy () {
 
 		GameObject fleetObject = Instantiate(fleetPrototype);
+		
+		enemyXPos = Random.Range(-2.5f, 2.5f);
+		enemyYPos = Random.Range(-2.5f, 2.5f);
 
-        float enemyXPos = Random.Range(-2.5f, 2.5f);
-        float enemyYPos = 5;
+		fleetObject.GetComponent<Fleet_Behaviour>().enemyXPos = enemyXPos;
+		fleetObject.GetComponent<Fleet_Behaviour>().enemyYPos = enemyYPos;
+		
         int directionRandom = Random.Range(0, 1);
         int directionValue = 0;
 
@@ -225,16 +235,27 @@ public class GameManager : MonoBehaviour
 
         for (int i = 1; i <= 5; i++) {
 
+        	int enemySprite = Random.Range(0, 7);
+
             GameObject enemyCopy = Instantiate(enemyPrototype);
+			
+        	spriteRenderer = enemyCopy.GetComponent<SpriteRenderer>();
+        	spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30,36,42  
+        	Vector2 sizeSpriteRenderer = enemyCopy.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        	enemyCopy.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
+
             enemyCopy.transform.localScale = new Vector3(1f, 1f, 0); 
-            enemyCopy.transform.position = new Vector3((transform.localScale.x + enemyCopy.GetComponent<SpriteRenderer>().bounds.size.x), (1Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y * -1), -1f);
+            enemyCopy.transform.position = new Vector3(enemyXPos, (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y * -1), -1f);
+
             enemyCopy.GetComponent<Enemy_Behaviour>().direction = new Vector3(directionValue, 0, 0);
 			
+			enemyXPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.x;
+
 			enemyCopy.transform.parent = fleetObject.transform;
         }
     }	
 
-	void createEnvironment () {
+	void generateEnvironment () {
 
 		if (!environmentCreated) {
 
@@ -259,6 +280,20 @@ public class GameManager : MonoBehaviour
 			spaceObjCopy.transform.parent = spaceEnvironment.transform;
         }		
 	}
+
+	void createPadle () {
+
+		GameObject paddle = Instantiate(paddlePrototype);
+		numberPlayers = 1;
+		minX = cameraX + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+		minXdelete = cameraX - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+		maxX = (cameraX * -1) - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+		maxXdelete = (cameraX * -1) + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
+
+		paddle.active = true;
+
+	}
+}	
 
 	//Spawns the bricks and sets their colours
 	// public void CreateBrickArray ()
@@ -310,4 +345,3 @@ public class GameManager : MonoBehaviour
 	// 		bricks = new List<GameObject>();			//Resets the 'bricks' list variable
 	// 	}
 	// }
-}
