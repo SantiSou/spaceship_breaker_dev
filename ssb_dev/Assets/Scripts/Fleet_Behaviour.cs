@@ -45,7 +45,7 @@ public class Fleet_Behaviour : MonoBehaviour
                 firstXPos = enemyXPos;
 
             }
-            else if ((childQty%5==0)) {
+            else if (childQty%5==0) {
                 enemyYPos += child.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
                 newLine = true;
             } else {

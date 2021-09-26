@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99701f5efe2e864f874418ca7c9a569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
-  maxSpeed: 500
+  speed: 700
+  maxSpeed: 2000
   time: 0
   direction: {x: 0, y: -1}
   rig: {fileID: 5003145007568357978}

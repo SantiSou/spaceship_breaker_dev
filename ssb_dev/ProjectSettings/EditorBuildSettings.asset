@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/BlockBreakerTemplate/Scenes/Menu.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
+    guid: 5cfa0444c30b0c447bfa68051ed65d99
+  - enabled: 0
     path: Assets/BlockBreakerTemplate/Scenes/Game.unity
-    guid: 00000000000000000000000000000000
+    guid: a965ad0954bae6746a1d168d20957ad8
   m_configObjects: {}

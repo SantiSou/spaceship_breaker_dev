@@ -12,6 +12,7 @@ TagManager:
   - Limit_Right
   - Background
   - Hud
+  - Scoreboard
   layers:
   - Default
   - TransparentFX

@@ -122,8 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   maxSpeed: 5000
-  speedFactor: 1500
-  slowFactor: 500
+  speedFactor: 1000
+  slowFactor: 100
   minX: -2.6
   minXdelete: 0
   maxX: 2.56

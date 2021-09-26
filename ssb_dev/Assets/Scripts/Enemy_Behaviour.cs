@@ -32,6 +32,13 @@ public class Enemy_Behaviour : MonoBehaviour
         // int.TryParse(spriteArray[enemySprite].ToString().Split('_')[1], out enemyPoints);
         enemyPoints = System.Convert.ToInt32(spriteArray[enemySprite].ToString().Split('_')[1].Split(' ')[0]);
 
+        Canvas canvas = FindObjectOfType<Canvas>();
+        float h = canvas.GetComponent<RectTransform>().rect.height;
+        float w = canvas.GetComponent<RectTransform>().rect.width;
+
+        print(h);
+        print(w);
+
     }
 
     void Update() {
@@ -58,7 +65,7 @@ public class Enemy_Behaviour : MonoBehaviour
             sideTouched = false;
         }
 
-        if (transform.position.y < 4.0f) {
+        if (transform.position.y < 5.1f) {
 
             manager.fleet_created = false;
 

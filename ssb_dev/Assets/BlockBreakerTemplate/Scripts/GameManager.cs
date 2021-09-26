@@ -25,15 +25,12 @@ public class GameManager : MonoBehaviour
 	public bool gameOver;			//Set true when the game is over
 	public bool wonGame;			//Set true when the game has been won
 	public bool isFaster;
-	public Text points;
 	public int countPoints; 
-    public Text distance;
     public int distanceTxtDiff;
     public string distanceTxt;
 	public GameObject paddlePrototype;		//The paddle game object
 	public GameObject ballPrototype;			//The ball game object
 	public GameUI gameUI;			//The GameUI class
-	public GameObject brickPrefab;	//The prefab of the Brick game object which will be spawned
 	public GameObject enemyPrototype;
 	public GameObject fleetPrototype;
 	public GameObject spaceObjPrototype;
@@ -62,6 +59,15 @@ public class GameManager : MonoBehaviour
     SpriteRenderer spriteRenderer;
 	AudioSource audioSource;
 	public AudioClip createBallAudio;
+	public Canvas canvasPrototype;
+	public Text distanceText;
+	public Text pointsText; 
+	public GameObject background;
+	public GameObject scoreboard;
+	public GameObject Score_panel;
+	public GameObject points;
+	public GameObject Distance_panel;
+	public GameObject distance;
 
 
 	void Start ()
@@ -81,7 +87,43 @@ public class GameManager : MonoBehaviour
 		cameraX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x;
 		cameraY = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y;
 
+		print(cameraX);
+		print(cameraY);
+
 		createPadle ();
+
+		Canvas canvas 		= Instantiate(canvasPrototype);
+		RectTransform canvasRT = canvas.GetComponent<RectTransform>();
+		canvas.renderMode 	= RenderMode.ScreenSpaceCamera;
+		canvas.worldCamera 	= Camera.main;
+
+		background 		= canvas.transform.Find("Background").gameObject;
+		RectTransform backgroundRT = background.GetComponent<RectTransform>();
+		// print(Screen.width);
+		// print(Screen.height);
+
+		backgroundRT.sizeDelta = new Vector2(Screen.width, Screen.height);
+		backgroundRT.localScale = new Vector3(1f, 1f, 0);
+
+		scoreboard 		= canvas.transform.Find("Scoreboard").gameObject;
+		scoreboard.transform.position = new Vector3(0, (cameraY*-1), 0);
+		scoreboard.transform.localScale = new Vector3(4f, 4f, 0); 
+		// print(canvasRT.rect.width);
+		// print(canvasRT.rect.height);
+
+
+		Score_panel		= scoreboard.transform.Find("Score_panel").gameObject;
+		points			= Score_panel.transform.Find("points").gameObject;
+		points.GetComponent<Text>().text = "0000000";
+
+		Distance_panel	= scoreboard.transform.Find("Distance_panel").gameObject;
+		distance		= Distance_panel.transform.Find("distance").gameObject;
+		distance.GetComponent<Text>().text = "0000001";
+
+		// scoreboard.transform.position = new Vector3(paddleObject.transform.position.x, -3.1f, 0);
+
+
+		time = 0.0f;
 
 		environmentCreated 		= false;
 		fleet_created 			= false;
@@ -89,10 +131,8 @@ public class GameManager : MonoBehaviour
 		gameOver 				= false;
 		wonGame 				= false;
 
-		distance.text = "0000000";
-		points.text = "0000000";
-		actualLevel = 1;
-		score = 0;
+		actualLevel 	= 1;
+		score 			= 0;
 	}
 
 	void Update () 
@@ -102,7 +142,7 @@ public class GameManager : MonoBehaviour
 		generateEnvironment ();
 		updateScoreboard ();
 		
-        if ((Random.Range(0,1000) == 1 && time >= 5) && !fleet_created) { // Condición para generar enemigos	
+        if ((Random.Range(1,500) == 1 && time >= 5) && !fleet_created) { // Condición para generar enemigos	
 
 			fleet_created = true;
             createEnemy ();
@@ -168,7 +208,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		pointsTxt += score.ToString();
-		points.text = pointsTxt;
+		points.GetComponent<Text>().text = pointsTxt;
 		
 	}
 
@@ -184,7 +224,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		distanceTxt += timerSec.ToString();
-        distance.text = distanceTxt;
+		distance.GetComponent<Text>().text = distanceTxt;
 	}
 
     void createBall () {
@@ -211,7 +251,9 @@ public class GameManager : MonoBehaviour
 		GameObject fleetObject = Instantiate(fleetPrototype);
 		
 		enemyXPos = Random.Range(-2.5f, 2.5f);
-		enemyYPos = Random.Range(-2.5f, 2.5f);
+		enemyYPos = (cameraY * -1);
+
+		float firstEnemyXPos = enemyXPos;
 
 		fleetObject.GetComponent<Fleet_Behaviour>().enemyXPos = enemyXPos;
 		fleetObject.GetComponent<Fleet_Behaviour>().enemyYPos = enemyYPos;
@@ -233,7 +275,7 @@ public class GameManager : MonoBehaviour
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValueY = 0;
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValue = directionValue;
 
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= (actualLevel*5); i++) {
 
         	int enemySprite = Random.Range(0, 7);
 
@@ -245,11 +287,20 @@ public class GameManager : MonoBehaviour
         	enemyCopy.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
 
             enemyCopy.transform.localScale = new Vector3(1f, 1f, 0); 
-            enemyCopy.transform.position = new Vector3(enemyXPos, (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y * -1), -1f);
+            enemyCopy.transform.position = new Vector3(enemyXPos, enemyYPos, -1f);
+
+			if (actualLevel%5==0) {
+
+				enemyXPos += firstEnemyXPos;
+				enemyYPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.y;
+
+			} else {
+			
+				enemyXPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.x;
+
+			}
 
             enemyCopy.GetComponent<Enemy_Behaviour>().direction = new Vector3(directionValue, 0, 0);
-			
-			enemyXPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.x;
 
 			enemyCopy.transform.parent = fleetObject.transform;
         }
