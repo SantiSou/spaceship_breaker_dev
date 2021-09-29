@@ -333,8 +333,6 @@ MonoBehaviour:
     type: 3}
   environmentPrototype: {fileID: 3545154454053806157, guid: 1fe1bae72b930e940a5511d0776dca4b,
     type: 3}
-  bricks: []
-  colors: []
   goingRight: 0
   goingLeft: 0
   environmentCreated: 0
@@ -358,8 +356,6 @@ MonoBehaviour:
   - {fileID: 21300036, guid: 8d18f6d2b73e89b4882fbf3bb5aedb4b, type: 3}
   - {fileID: 21300048, guid: 8d18f6d2b73e89b4882fbf3bb5aedb4b, type: 3}
   - {fileID: 21300060, guid: 8d18f6d2b73e89b4882fbf3bb5aedb4b, type: 3}
-  - {fileID: 21300072, guid: 8d18f6d2b73e89b4882fbf3bb5aedb4b, type: 3}
-  - {fileID: 21300084, guid: 8d18f6d2b73e89b4882fbf3bb5aedb4b, type: 3}
   createBallAudio: {fileID: 8300000, guid: eec3bf121b316d64ca1c8aac7573a2f4, type: 3}
   canvasPrototype: {fileID: 2445717574229626915, guid: 08dae047e85f7f7408e24162ad80e3d6,
     type: 3}

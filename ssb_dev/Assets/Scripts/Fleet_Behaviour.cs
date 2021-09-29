@@ -26,6 +26,18 @@ public class Fleet_Behaviour : MonoBehaviour
         if (transform.childCount < 1) {
             Destroy(gameObject);
         } 
+        
+        if (manager.countBalls < manager.actualLevel) {
+
+            foreach (Transform child in transform) {
+
+                if (Random.Range(0, 10) == 0) {
+                    manager.createBall(child.gameObject);
+                    break;
+                }
+
+            }
+        }
     }
 
     public void reArrangeFleet () {

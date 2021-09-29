@@ -36,8 +36,6 @@ public class GameManager : MonoBehaviour
 	public GameObject spaceObjPrototype;
 	public GameObject environmentPrototype;
 	GameObject spaceEnvironment;
-	public List<GameObject> bricks = new List<GameObject>();	//List of all the bricks currently on the screen
-	public Color[] colors;			//The color array of the bricks. This can be modified to create different brick color patterns
 	public bool goingRight;
 	public bool goingLeft;
 	public bool environmentCreated;
@@ -68,6 +66,8 @@ public class GameManager : MonoBehaviour
 	public GameObject points;
 	public GameObject Distance_panel;
 	public GameObject distance;
+	public int countBalls;
+	public int countEnemies;
 
 
 	void Start ()
@@ -77,12 +77,29 @@ public class GameManager : MonoBehaviour
 		
 	}
 
+	void Update () 
+	{
+		time += Time.deltaTime;
+
+		generateEnvironment ();
+		updateScoreboard ();
+
+		if (countEnemies < actualLevel) {
+            createEnemy ();
+			countEnemies++;
+		}
+	}
+
 	public void StartGame ()
+
 	{		
+		time = 0.0f;
+		actualLevel 	= 1;
+		countBalls		= 0;
+		countEnemies	= 0;
+		score 			= 0;
 
 		audioSource = gameObject.GetComponent<AudioSource>();
-
-		time = 0.0f;
 
 		cameraX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x;
 		cameraY = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y;
@@ -99,18 +116,14 @@ public class GameManager : MonoBehaviour
 
 		background 		= canvas.transform.Find("Background").gameObject;
 		RectTransform backgroundRT = background.GetComponent<RectTransform>();
-		// print(Screen.width);
-		// print(Screen.height);
+		print(Screen.width);
+		print(Screen.height);
 
-		backgroundRT.sizeDelta = new Vector2(Screen.width, Screen.height);
-		backgroundRT.localScale = new Vector3(1f, 1f, 0);
-
+		backgroundRT.sizeDelta = new Vector2(canvas.GetComponent<CanvasScaler>().referenceResolution.x, canvas.GetComponent<CanvasScaler>().referenceResolution.y);
+		
 		scoreboard 		= canvas.transform.Find("Scoreboard").gameObject;
 		scoreboard.transform.position = new Vector3(0, (cameraY*-1), 0);
 		scoreboard.transform.localScale = new Vector3(4f, 4f, 0); 
-		// print(canvasRT.rect.width);
-		// print(canvasRT.rect.height);
-
 
 		Score_panel		= scoreboard.transform.Find("Score_panel").gameObject;
 		points			= Score_panel.transform.Find("points").gameObject;
@@ -118,78 +131,15 @@ public class GameManager : MonoBehaviour
 
 		Distance_panel	= scoreboard.transform.Find("Distance_panel").gameObject;
 		distance		= Distance_panel.transform.Find("distance").gameObject;
-		distance.GetComponent<Text>().text = "0000001";
-
-		// scoreboard.transform.position = new Vector3(paddleObject.transform.position.x, -3.1f, 0);
-
+		distance.GetComponent<Text>().text = "0000000";
 
 		time = 0.0f;
 
 		environmentCreated 		= false;
-		fleet_created 			= false;
 		ballCreated 			= false;
 		gameOver 				= false;
 		wonGame 				= false;
-
-		actualLevel 	= 1;
-		score 			= 0;
-	}
-
-	void Update () 
-	{
-		time += Time.deltaTime;
-
-		generateEnvironment ();
-		updateScoreboard ();
-		
-        if ((Random.Range(1,500) == 1 && time >= 5) && !fleet_created) { // Condición para generar enemigos	
-
-			fleet_created = true;
-            createEnemy ();
-            time = 0.0f;
-
-        }  
-
-        if (!isFaster) {
-            timer += Time.deltaTime;		
-        } //else
-         //   timer += (Time.deltaTime*3);
-
-        if (Input.GetKey(KeyCode.UpArrow)) {
-
-			timer_keyDown += Time.deltaTime;
-
-			if (!ballCreated) {
-				ballCreated = true;
-				audioSource.PlayOneShot(createBallAudio, 0.3f);
-				createBall ();
-			}
-        }
-		else if (Input.GetKeyUp(KeyCode.UpArrow)) {
-
-				object[] obj = GameObject.FindObjectsOfType(typeof (GameObject));
-
-				foreach (object o in obj)
-				{
-
-					GameObject gameObject = (GameObject) o;
-					
-					if (gameObject.name == "ball_test(Clone)") {
-						
-						if (timer_keyDown < 1.0f && !gameObject.GetComponent<Ball>().ballGenerated) {
-							Destroy(gameObject);
-						}
-						else {
-							gameObject.GetComponent<Ball>().ballGenerated = true;
-						}
-
-					}	
-				}
- 
-				ballCreated = false;
-				timer_keyDown = 0.0f;
-		}		
-	}
+	}	
 
 	public void UpdatePoints () {
 
@@ -227,23 +177,14 @@ public class GameManager : MonoBehaviour
 		distance.GetComponent<Text>().text = distanceTxt;
 	}
 
-    void createBall () {
+    public void createBall (GameObject obj) {
 
-		object[] obj = GameObject.FindObjectsOfType(typeof (GameObject));
+		GameObject ballObject 			= Instantiate(ballPrototype);
+		
+		ballObject.transform.position 	= new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
+		ballObject.active 				= true;
+		countBalls++;
 
-		foreach (object o in obj)
-		{
-			GameObject paddleObject = (GameObject) o;
-			if (paddleObject.name == "block_test(Clone)") {
-
-				GameObject ballObject 			= Instantiate(ballPrototype);
-				
-				ballObject.transform.position 	= new Vector3(paddleObject.transform.position.x, -3.1f, 0);
-				ballObject.transform.parent 	= paddleObject.transform;
-				paddlePrototype 				= paddleObject;
-				ballObject.active 				= true;
-			}	
-		}			
 	}
 
     void createEnemy () {
@@ -275,14 +216,14 @@ public class GameManager : MonoBehaviour
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValueY = 0;
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValue = directionValue;
 
-        for (int i = 1; i <= (actualLevel*5); i++) {
+        for (int i = 0; i < (actualLevel); i++) {
 
-        	int enemySprite = Random.Range(0, 7);
+        	int enemySprite = Random.Range(0, spriteArray.Length);
 
             GameObject enemyCopy = Instantiate(enemyPrototype);
 			
         	spriteRenderer = enemyCopy.GetComponent<SpriteRenderer>();
-        	spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30,36,42  
+        	spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30
         	Vector2 sizeSpriteRenderer = enemyCopy.GetComponent<SpriteRenderer>().sprite.bounds.size;
         	enemyCopy.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
 
