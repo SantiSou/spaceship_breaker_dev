@@ -81,12 +81,12 @@ public class GameManager : MonoBehaviour
 	{
 		time += Time.deltaTime;
 
-		generateEnvironment ();
+		// generateEnvironment ();
 		updateScoreboard ();
 
 		if (countEnemies < actualLevel) {
-            createEnemy ();
-			countEnemies++;
+			int qty = actualLevel - countEnemies;
+            createEnemy (qty);
 		}
 	}
 
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 		actualLevel 	= 1;
 		countBalls		= 0;
 		countEnemies	= 0;
-		score 			= 0;
+		score 			= 2000;
 
 		audioSource = gameObject.GetComponent<AudioSource>();
 
@@ -187,7 +187,7 @@ public class GameManager : MonoBehaviour
 
 	}
 
-    void createEnemy () {
+    void createEnemy (int qty) {
 
 		GameObject fleetObject = Instantiate(fleetPrototype);
 		
@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValueY = 0;
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValue = directionValue;
 
-        for (int i = 0; i < (actualLevel); i++) {
+        for (int i = 0; i < qty; i++) {
 
         	int enemySprite = Random.Range(0, spriteArray.Length);
 
@@ -244,6 +244,7 @@ public class GameManager : MonoBehaviour
             enemyCopy.GetComponent<Enemy_Behaviour>().direction = new Vector3(directionValue, 0, 0);
 
 			enemyCopy.transform.parent = fleetObject.transform;
+			countEnemies++;
         }
     }	
 

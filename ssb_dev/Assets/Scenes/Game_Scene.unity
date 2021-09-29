@@ -308,7 +308,7 @@ MonoBehaviour:
   spaceObjxPos: 0
   spaceObjScale: 0
   enemySpeed: 3
-  ballSpeed: 2000
+  ballSpeed: 1000
   timer_keyDown: 0
   timer: 0
   time: 0
@@ -367,6 +367,8 @@ MonoBehaviour:
   points: {fileID: 0}
   Distance_panel: {fileID: 0}
   distance: {fileID: 0}
+  countBalls: 0
+  countEnemies: 0
 --- !u!4 &1035255580
 Transform:
   m_ObjectHideFlags: 0
