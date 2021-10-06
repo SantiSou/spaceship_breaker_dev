@@ -26,25 +26,8 @@ public class Ball : MonoBehaviour
 
 	void Update ()
 	{
+		MovementControl ();
 		gameObject.transform.SetParent(null);
-		rig.velocity = direction * manager.ballSpeed * Time.deltaTime; //Sets the object's rigidbody velocity to the direction multiplied by the speed
-
-		if(transform.position.x > ((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x)*-1) && !goingLeft){
-			direction = new Vector2(-direction.x, direction.y);		
-			goingLeft = true;										
-		}
-		if(transform.position.x < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x) && goingLeft){	
-			direction = new Vector2(-direction.x, direction.y);		
-			goingLeft = false;										
-		}
-		if(transform.position.y > (((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)*-1))){							
-			DestroyBall ();	
-			manager.countBalls--;													
-		}
-		if(transform.position.y < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)){								
-			DestroyBall ();		
-			manager.countBalls--;									
-		}	
 	}
 
 	public void SetDirection (Vector3 target)
@@ -74,6 +57,29 @@ public class Ball : MonoBehaviour
 	public void DestroyBall () {
 
 		Destroy(gameObject);
+
+	}
+
+	void MovementControl () {
+
+		rig.velocity = direction * manager.ballSpeed * Time.deltaTime; //Sets the object's rigidbody velocity to the direction multiplied by the speed
+
+		if(transform.position.x > ((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x)*-1) && !goingLeft){
+			direction = new Vector2(-direction.x, direction.y);		
+			goingLeft = true;										
+		}
+		if(transform.position.x < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x) && goingLeft){	
+			direction = new Vector2(-direction.x, direction.y);		
+			goingLeft = false;										
+		}
+		if(transform.position.y > (((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)*-1))){							
+			DestroyBall ();	
+			manager.countBalls--;													
+		}
+		if(transform.position.y < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)){								
+			DestroyBall ();		
+			manager.countBalls--;									
+		}	
 
 	}
 
