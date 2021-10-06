@@ -63,6 +63,7 @@ public class Enemy_Behaviour : MonoBehaviour
 
         if (transform.position.y < manager.cameraY) {
             Destroy(gameObject);
+            manager.countEnemies--; 
         }
         else if (transform.position.x < manager.cameraX && !sideTouched) {
 
@@ -83,7 +84,7 @@ public class Enemy_Behaviour : MonoBehaviour
 
         gameObject.GetComponent<Enemy_Behaviour>().direction = new Vector3(gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValue, gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValueY, 0);                
 
-        stepVector = manager.enemySpeed * gameObject.GetComponent<Enemy_Behaviour>().direction;
+        stepVector = gameObject.GetComponent<Enemy_Behaviour>().direction * manager.enemySpeed * Time.deltaTime;
         rb.velocity = stepVector;
     }    
 }
