@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 	public GameObject fleetPrototype;
 	public GameObject spaceObjPrototype;
 	public GameObject environmentPrototype;
+	public GameObject MongoAPI;
 	GameObject spaceEnvironment;
 	public bool goingRight;
 	public bool goingLeft;
@@ -69,12 +70,9 @@ public class GameManager : MonoBehaviour
 	public int countBalls;
 	public int countEnemies;
 
-
 	void Start ()
 	{
-
 		StartGame();
-		
 	}
 
 	void Update () 
@@ -84,8 +82,8 @@ public class GameManager : MonoBehaviour
 		// generateEnvironment ();
 		updateScoreboard ();
 
-		if (countEnemies < actualLevel) {
-			int qty = actualLevel - countEnemies;
+		if (countEnemies < actualLevel*5) {
+			int qty = (actualLevel*5) - countEnemies;
             createEnemy (qty);
 		}
 	}
@@ -93,11 +91,15 @@ public class GameManager : MonoBehaviour
 	public void StartGame ()
 
 	{		
+
+		GameObject mongo = Instantiate(MongoAPI);
+		
+
 		time = 0.0f;
 		actualLevel 	= 1;
 		countBalls		= 0;
 		countEnemies	= 0;
-		score 			= 2000;
+		score 			= 0;
 
 		audioSource = gameObject.GetComponent<AudioSource>();
 
@@ -191,7 +193,7 @@ public class GameManager : MonoBehaviour
 
 		GameObject fleetObject = Instantiate(fleetPrototype);
 		
-		enemyXPos = Random.Range(-2.5f, 2.5f);
+		enemyXPos = 0;//Random.Range(-2.5f, 2.5f);
 		enemyYPos = (cameraY * -1);
 
 		float firstEnemyXPos = enemyXPos;
@@ -232,11 +234,11 @@ public class GameManager : MonoBehaviour
 
 			if (actualLevel%5==0) {
 
-				enemyXPos += firstEnemyXPos;
+				enemyXPos = firstEnemyXPos;
 				enemyYPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.y;
 
 			} else {
-			
+				
 				enemyXPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.x;
 
 			}
