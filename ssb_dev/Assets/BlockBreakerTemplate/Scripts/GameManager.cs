@@ -250,32 +250,6 @@ public class GameManager : MonoBehaviour
         }
     }	
 
-	void generateEnvironment () {
-
-		if (!environmentCreated) {
-
-			GameObject spaceEnvironment = Instantiate(environmentPrototype);
-			spaceEnvironment.name = "Environment";
-			environmentCreated = true;
-
-		}		
-
-		spaceEnvironment = GameObject.Find("Environment");
-
-        if (Random.value < 1f / (60f * 3f)) { // Condición para generar estrellas
-
-            float spaceObjxPos = Random.Range(-2.6f, 2.7f);
-            float spaceObjScale = Random.Range(0.1f, 1f);        
-
-            GameObject spaceObjCopy = Instantiate(spaceObjPrototype);
-            spaceObjCopy.transform.localScale = new Vector3(spaceObjScale, spaceObjScale, 0); 
-            spaceObjCopy.transform.position = new Vector3(spaceObjxPos, transform.position.y, -1f);
-            spaceObjCopy.GetComponent<Star_Behaviour>().direction = new Vector3(0, -transform.localScale.y, 0);
-
-			spaceObjCopy.transform.parent = spaceEnvironment.transform;
-        }		
-	}
-
 	void createPadle () {
 
 		GameObject paddle = Instantiate(paddlePrototype);
@@ -288,7 +262,39 @@ public class GameManager : MonoBehaviour
 		paddle.active = true;
 
 	}
+
+	int getActualLevel (int experience) {
+
+		
+
+	}
 }	
+
+	// void generateEnvironment () {
+
+	// 	if (!environmentCreated) {
+
+	// 		GameObject spaceEnvironment = Instantiate(environmentPrototype);
+	// 		spaceEnvironment.name = "Environment";
+	// 		environmentCreated = true;
+
+	// 	}		
+
+	// 	spaceEnvironment = GameObject.Find("Environment");
+
+    //     if (Random.value < 1f / (60f * 3f)) { // Condición para generar estrellas
+
+    //         float spaceObjxPos = Random.Range(-2.6f, 2.7f);
+    //         float spaceObjScale = Random.Range(0.1f, 1f);        
+
+    //         GameObject spaceObjCopy = Instantiate(spaceObjPrototype);
+    //         spaceObjCopy.transform.localScale = new Vector3(spaceObjScale, spaceObjScale, 0); 
+    //         spaceObjCopy.transform.position = new Vector3(spaceObjxPos, transform.position.y, -1f);
+    //         spaceObjCopy.GetComponent<Star_Behaviour>().direction = new Vector3(0, -transform.localScale.y, 0);
+
+	// 		spaceObjCopy.transform.parent = spaceEnvironment.transform;
+    //     }		
+	// }
 
 	//Spawns the bricks and sets their colours
 	// public void CreateBrickArray ()
