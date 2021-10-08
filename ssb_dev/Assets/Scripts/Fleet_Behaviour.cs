@@ -27,7 +27,7 @@ public class Fleet_Behaviour : MonoBehaviour
             Destroy(gameObject);
         } 
         
-        if (manager.countBalls < manager.actualLevel) {
+        if (manager.countBalls < manager.maxBalls) {
 
             foreach (Transform child in transform) {
 
@@ -58,16 +58,12 @@ public class Fleet_Behaviour : MonoBehaviour
 
             }
             else if (childQty%5==0) {
-                enemyYPos += child.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
+                enemyYPos += child.GetComponent<BoxCollider2D>().bounds.size.y;
+                enemyXPos = firstXPos;
                 newLine = true;
             } else {
 
-                if (!newLine) {
-                    enemyXPos += child.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
-                } else {
-                    enemyXPos = firstXPos;
-                    newLine = false;
-                }
+                enemyXPos += child.GetComponent<BoxCollider2D>().bounds.size.x;
             }
 
             child.transform.position = new Vector3(enemyXPos, enemyYPos, child.transform.position.z);
