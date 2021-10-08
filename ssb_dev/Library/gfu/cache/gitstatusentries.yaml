@@ -13,9 +13,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2021-10-06T12:21:30.661-03:00
-  initializedAtString: 2021-10-05T19:51:09.983-03:00
+  lastUpdatedAtString: 2021-10-07T21:50:55.581-03:00
+  initializedAtString: 2021-10-07T21:50:54.669-03:00
   entries:
+  - path: ssb_dev\Assets\Anims\Crossfade.controller
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Anims\Crossfade.controller
+    projectPath: Assets\Anims\Crossfade.controller
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Anims\Crossfade.controller.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Anims\Crossfade.controller.meta
+    projectPath: Assets\Anims\Crossfade.controller.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Anims\Crossfade_End.anim
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Anims\Crossfade_End.anim
+    projectPath: Assets\Anims\Crossfade_End.anim
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Anims\Crossfade_End.anim.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Anims\Crossfade_End.anim.meta
+    projectPath: Assets\Anims\Crossfade_End.anim.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Anims\Crossfade_Start.anim
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Anims\Crossfade_Start.anim
+    projectPath: Assets\Anims\Crossfade_Start.anim
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Anims\Crossfade_Start.anim.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Anims\Crossfade_Start.anim.meta
+    projectPath: Assets\Anims\Crossfade_Start.anim.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\BlockBreakerTemplate\Scenes.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\BlockBreakerTemplate\Scenes.meta
+    projectPath: Assets\BlockBreakerTemplate\Scenes.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Assets\BlockBreakerTemplate\Scenes\Menu.unity
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\BlockBreakerTemplate\Scenes\Menu.unity
+    projectPath: Assets\BlockBreakerTemplate\Scenes\Menu.unity
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Assets\BlockBreakerTemplate\Scenes\Menu.unity.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\BlockBreakerTemplate\Scenes\Menu.unity.meta
+    projectPath: Assets\BlockBreakerTemplate\Scenes\Menu.unity.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Assets\BlockBreakerTemplate\Scripts\Ball.cs
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\BlockBreakerTemplate\Scripts\Ball.cs
     projectPath: Assets\BlockBreakerTemplate\Scripts\Ball.cs
@@ -28,21 +82,33 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ssb_dev\Assets\LevelLoader.cs
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\LevelLoader.cs
+    projectPath: Assets\LevelLoader.cs
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\LevelLoader.cs.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\LevelLoader.cs.meta
+    projectPath: Assets\LevelLoader.cs.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: ssb_dev\Assets\Prefabs\ball_test.prefab
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Prefabs\ball_test.prefab
     projectPath: Assets\Prefabs\ball_test.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ssb_dev\Assets\Prefabs\MongoAPI.prefab
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Prefabs\MongoAPI.prefab
-    projectPath: Assets\Prefabs\MongoAPI.prefab
+  - path: ssb_dev\Assets\Prefabs\LevelLoader.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Prefabs\LevelLoader.prefab
+    projectPath: Assets\Prefabs\LevelLoader.prefab
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Assets\Prefabs\MongoAPI.prefab.meta
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Prefabs\MongoAPI.prefab.meta
-    projectPath: Assets\Prefabs\MongoAPI.prefab.meta
+  - path: ssb_dev\Assets\Prefabs\LevelLoader.prefab.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Prefabs\LevelLoader.prefab.meta
+    projectPath: Assets\Prefabs\LevelLoader.prefab.meta
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -52,57 +118,141 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ssb_dev\Assets\Scenes\MainMenu_Scene.unity
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scenes\MainMenu_Scene.unity
+    projectPath: Assets\Scenes\MainMenu_Scene.unity
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Scenes\MainMenu_Scene.unity.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scenes\MainMenu_Scene.unity.meta
+    projectPath: Assets\Scenes\MainMenu_Scene.unity.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Assets\Scenes\SampleScene.unity
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scenes\SampleScene.unity
+    projectPath: Assets\Scenes\SampleScene.unity
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Assets\Scenes\SampleScene.unity.meta
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scenes\SampleScene.unity.meta
+    projectPath: Assets\Scenes\SampleScene.unity.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Assets\Scripts\Enemy_Behaviour.cs
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scripts\Enemy_Behaviour.cs
     projectPath: Assets\Scripts\Enemy_Behaviour.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ssb_dev\Assets\Scripts\MongoAPI.cs
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scripts\MongoAPI.cs
-    projectPath: Assets\Scripts\MongoAPI.cs
+  - path: ssb_dev\Assets\Scripts\Fleet_Behaviour.cs
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scripts\Fleet_Behaviour.cs
+    projectPath: Assets\Scripts\Fleet_Behaviour.cs
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Assets\Scripts\MongoAPI.cs.meta
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\Scripts\MongoAPI.cs.meta
-    projectPath: Assets\Scripts\MongoAPI.cs.meta
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_1.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_1.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_1.prefab
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_2.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_2.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_2.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_3.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_3.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_3.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_4.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_4.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_4.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_5.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_5.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_5.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_6.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_6.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_6.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_7.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_7.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_7.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_8.prefab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Assets\spaceship_sprites\prefabs\spaceship_8.prefab
+    projectPath: Assets\spaceship_sprites\prefabs\spaceship_8.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: ssb_dev\Library\ArtifactDB
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ArtifactDB
     projectPath: Library\ArtifactDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ssb_dev\Library\Artifacts\00\000346a2b95ac839648bbf232208b642
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\00\000346a2b95ac839648bbf232208b642
+    projectPath: Library\Artifacts\00\000346a2b95ac839648bbf232208b642
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: ssb_dev\Library\Artifacts\03\030cdb5387f299ba9600437e18ae6941
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\03\030cdb5387f299ba9600437e18ae6941
     projectPath: Library\Artifacts\03\030cdb5387f299ba9600437e18ae6941
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\05\05d6bd124c25743394c4d9d821e7ba47
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\05\05d6bd124c25743394c4d9d821e7ba47
-    projectPath: Library\Artifacts\05\05d6bd124c25743394c4d9d821e7ba47
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\07\078349869e4ad79cdd9144bfd6cd7521
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\07\078349869e4ad79cdd9144bfd6cd7521
+    projectPath: Library\Artifacts\07\078349869e4ad79cdd9144bfd6cd7521
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\08\0802ae6d72f51c8650e815aa3abe00ea
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\08\0802ae6d72f51c8650e815aa3abe00ea
-    projectPath: Library\Artifacts\08\0802ae6d72f51c8650e815aa3abe00ea
+  - path: ssb_dev\Library\Artifacts\0a\0adbdff0ca6490628c047b90b3f8c325
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0a\0adbdff0ca6490628c047b90b3f8c325
+    projectPath: Library\Artifacts\0a\0adbdff0ca6490628c047b90b3f8c325
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: ssb_dev\Library\Artifacts\0a\0aa2cfe092fa99e1e8e37879f492b997
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0a\0aa2cfe092fa99e1e8e37879f492b997
-    projectPath: Library\Artifacts\0a\0aa2cfe092fa99e1e8e37879f492b997
+  - path: ssb_dev\Library\Artifacts\0c\0cfa3b6838268fde60a55f65b5b7a8a3
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0c\0cfa3b6838268fde60a55f65b5b7a8a3
+    projectPath: Library\Artifacts\0c\0cfa3b6838268fde60a55f65b5b7a8a3
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\0f\0f8b3f4c5318e489964796ace6ba35ab
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\0f\0f8b3f4c5318e489964796ace6ba35ab
+    projectPath: Library\Artifacts\0f\0f8b3f4c5318e489964796ace6ba35ab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: ssb_dev\Library\Artifacts\13\135bed32508cff3fabc004308a22c12f
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\13\135bed32508cff3fabc004308a22c12f
-    projectPath: Library\Artifacts\13\135bed32508cff3fabc004308a22c12f
+  - path: ssb_dev\Library\Artifacts\16\1693975d07262e4c055f051cd1659470
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\16\1693975d07262e4c055f051cd1659470
+    projectPath: Library\Artifacts\16\1693975d07262e4c055f051cd1659470
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\19\19f7c39c41742f1ca8a4313ceb12a170
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\19\19f7c39c41742f1ca8a4313ceb12a170
+    projectPath: Library\Artifacts\19\19f7c39c41742f1ca8a4313ceb12a170
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -110,23 +260,35 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\1c\1c3086f526a898d744ac8be80dc5ac70
     projectPath: Library\Artifacts\1c\1c3086f526a898d744ac8be80dc5ac70
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\1d\1dd583b098ffedd57a5c3978a897a363
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\1d\1dd583b098ffedd57a5c3978a897a363
     projectPath: Library\Artifacts\1d\1dd583b098ffedd57a5c3978a897a363
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\21\2178a8a0fa8308fcfa83c6c3cf779a0c
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\21\2178a8a0fa8308fcfa83c6c3cf779a0c
+    projectPath: Library\Artifacts\21\2178a8a0fa8308fcfa83c6c3cf779a0c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\22\2207581bf797c21c3bd93d1e2e9035af
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\22\2207581bf797c21c3bd93d1e2e9035af
     projectPath: Library\Artifacts\22\2207581bf797c21c3bd93d1e2e9035af
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\26\26072b5f285ef6516580c9b567cb4cd5
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\26\26072b5f285ef6516580c9b567cb4cd5
+    projectPath: Library\Artifacts\26\26072b5f285ef6516580c9b567cb4cd5
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\26\26bcd7b8c2b0c1021e8deeeeed1bcc92
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\26\26bcd7b8c2b0c1021e8deeeeed1bcc92
-    projectPath: Library\Artifacts\26\26bcd7b8c2b0c1021e8deeeeed1bcc92
+  - path: ssb_dev\Library\Artifacts\26\2659d0e4f916c896c104e6f8c97651e2
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\26\2659d0e4f916c896c104e6f8c97651e2
+    projectPath: Library\Artifacts\26\2659d0e4f916c896c104e6f8c97651e2
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -134,17 +296,23 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\29\298b654e479ba28207f8f3351637426c
     projectPath: Library\Artifacts\29\298b654e479ba28207f8f3351637426c
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\2a\2a02e10d1fb6c301f32be4255574a6ec
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\2a\2a02e10d1fb6c301f32be4255574a6ec
-    projectPath: Library\Artifacts\2a\2a02e10d1fb6c301f32be4255574a6ec
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\2e\2e38715e073cc1024debda7d2221aa30
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\2e\2e38715e073cc1024debda7d2221aa30
     projectPath: Library\Artifacts\2e\2e38715e073cc1024debda7d2221aa30
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\2f\2f868a877306ee5f99057eea6e6c08e2
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\2f\2f868a877306ee5f99057eea6e6c08e2
+    projectPath: Library\Artifacts\2f\2f868a877306ee5f99057eea6e6c08e2
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\35\35b1b9ab1de5fd34d67d30ddcfffca14
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\35\35b1b9ab1de5fd34d67d30ddcfffca14
+    projectPath: Library\Artifacts\35\35b1b9ab1de5fd34d67d30ddcfffca14
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -152,41 +320,77 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\36\3634c2142a690906416e978c6bad52d0
     projectPath: Library\Artifacts\36\3634c2142a690906416e978c6bad52d0
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\36\366d7e7817afa7076f081d04a1f6e9b8
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\36\366d7e7817afa7076f081d04a1f6e9b8
+    projectPath: Library\Artifacts\36\366d7e7817afa7076f081d04a1f6e9b8
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\36\36799508b36a0a71ebb778473d434007
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\36\36799508b36a0a71ebb778473d434007
+    projectPath: Library\Artifacts\36\36799508b36a0a71ebb778473d434007
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\36\368ada8dd3dccbd016ceb9d28d686708
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\36\368ada8dd3dccbd016ceb9d28d686708
+    projectPath: Library\Artifacts\36\368ada8dd3dccbd016ceb9d28d686708
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\38\385daa81a9f817e9cd60f32174fa6b76
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\38\385daa81a9f817e9cd60f32174fa6b76
     projectPath: Library\Artifacts\38\385daa81a9f817e9cd60f32174fa6b76
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\38\38d1fba5dc56342cd70105c775c5051a
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\38\38d1fba5dc56342cd70105c775c5051a
     projectPath: Library\Artifacts\38\38d1fba5dc56342cd70105c775c5051a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\3b\3be8cafb43b323bc65ecea5e63638ec6
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\3b\3be8cafb43b323bc65ecea5e63638ec6
     projectPath: Library\Artifacts\3b\3be8cafb43b323bc65ecea5e63638ec6
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\3c\3c11e74a029688163c843807edc9acf6
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\3c\3c11e74a029688163c843807edc9acf6
+    projectPath: Library\Artifacts\3c\3c11e74a029688163c843807edc9acf6
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\3e\3e228b5b772f574b40d67943398756cc
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\3e\3e228b5b772f574b40d67943398756cc
     projectPath: Library\Artifacts\3e\3e228b5b772f574b40d67943398756cc
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\3f\3f164e88f3217554ed08c3e9a44f1550
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\3f\3f164e88f3217554ed08c3e9a44f1550
     projectPath: Library\Artifacts\3f\3f164e88f3217554ed08c3e9a44f1550
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\41\41572f9d5579792145d7cced810ff5fb
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\41\41572f9d5579792145d7cced810ff5fb
+    projectPath: Library\Artifacts\41\41572f9d5579792145d7cced810ff5fb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\41\415791a522b14f8f1d5b401aa39a138e
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\41\415791a522b14f8f1d5b401aa39a138e
     projectPath: Library\Artifacts\41\415791a522b14f8f1d5b401aa39a138e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\43\435f8ffc63881e99adddb8bd4cefea78
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\43\435f8ffc63881e99adddb8bd4cefea78
+    projectPath: Library\Artifacts\43\435f8ffc63881e99adddb8bd4cefea78
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -194,17 +398,29 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\45\450827db69214ea933e1e505a09cd54f
     projectPath: Library\Artifacts\45\450827db69214ea933e1e505a09cd54f
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\45\45902c1d7befc678cced3089bb0b7e6e
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\45\45902c1d7befc678cced3089bb0b7e6e
-    projectPath: Library\Artifacts\45\45902c1d7befc678cced3089bb0b7e6e
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\45\45b69fc663473ba599ab282d0d04f03b
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\45\45b69fc663473ba599ab282d0d04f03b
     projectPath: Library\Artifacts\45\45b69fc663473ba599ab282d0d04f03b
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\47\4782b04c7fc7fd83136922ee3df06e63
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\47\4782b04c7fc7fd83136922ee3df06e63
+    projectPath: Library\Artifacts\47\4782b04c7fc7fd83136922ee3df06e63
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\49\4948669e750cd53ad136501c1fc94b0e
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\49\4948669e750cd53ad136501c1fc94b0e
+    projectPath: Library\Artifacts\49\4948669e750cd53ad136501c1fc94b0e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\4b\4b0dc8cb9380fffcbdca793755f11d74
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\4b\4b0dc8cb9380fffcbdca793755f11d74
+    projectPath: Library\Artifacts\4b\4b0dc8cb9380fffcbdca793755f11d74
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -212,23 +428,23 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\4f\4f69561957cd196bac3220a4fc0041dc
     projectPath: Library\Artifacts\4f\4f69561957cd196bac3220a4fc0041dc
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\56\568f51c7f855e44fc90c41e2aa955fb7
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\56\568f51c7f855e44fc90c41e2aa955fb7
     projectPath: Library\Artifacts\56\568f51c7f855e44fc90c41e2aa955fb7
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\58\5830acbd57a75d7b3697249ccd41ea02
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\58\5830acbd57a75d7b3697249ccd41ea02
     projectPath: Library\Artifacts\58\5830acbd57a75d7b3697249ccd41ea02
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\5e\5eed8175e3dfb14eeeb7b884150ec646
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\5e\5eed8175e3dfb14eeeb7b884150ec646
-    projectPath: Library\Artifacts\5e\5eed8175e3dfb14eeeb7b884150ec646
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\58\584ca777517777fef3c12066b7b9a7c7
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\58\584ca777517777fef3c12066b7b9a7c7
+    projectPath: Library\Artifacts\58\584ca777517777fef3c12066b7b9a7c7
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -236,23 +452,29 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\63\6356af7688945ddebb0ba97ad709f98e
     projectPath: Library\Artifacts\63\6356af7688945ddebb0ba97ad709f98e
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\65\6538351602c2841018634d22336c815e
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\65\6538351602c2841018634d22336c815e
     projectPath: Library\Artifacts\65\6538351602c2841018634d22336c815e
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\67\6736340d0a6da233ad89542b209146ec
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\67\6736340d0a6da233ad89542b209146ec
     projectPath: Library\Artifacts\67\6736340d0a6da233ad89542b209146ec
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\68\6855d1a6f9a2ebe8a19a95594ec3c99e
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\68\6855d1a6f9a2ebe8a19a95594ec3c99e
+    projectPath: Library\Artifacts\68\6855d1a6f9a2ebe8a19a95594ec3c99e
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\70\70e21fede54dbb8a4f66de05642f888a
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\70\70e21fede54dbb8a4f66de05642f888a
-    projectPath: Library\Artifacts\70\70e21fede54dbb8a4f66de05642f888a
+  - path: ssb_dev\Library\Artifacts\69\690b5578cb29a224be18f88a4627e37a
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\69\690b5578cb29a224be18f88a4627e37a
+    projectPath: Library\Artifacts\69\690b5578cb29a224be18f88a4627e37a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -260,11 +482,11 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\71\7138c72b6aa8ba5ce9a87772a46587b6
     projectPath: Library\Artifacts\71\7138c72b6aa8ba5ce9a87772a46587b6
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\71\71711dee5e8579270524386330ae8dd4
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\71\71711dee5e8579270524386330ae8dd4
-    projectPath: Library\Artifacts\71\71711dee5e8579270524386330ae8dd4
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\72\72e9735a19cacd4b9903b09172b82adc
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\72\72e9735a19cacd4b9903b09172b82adc
+    projectPath: Library\Artifacts\72\72e9735a19cacd4b9903b09172b82adc
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -272,35 +494,59 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\7d\7de5f30fd90e5548ecb636144eadb9e8
     projectPath: Library\Artifacts\7d\7de5f30fd90e5548ecb636144eadb9e8
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\80\8087378a675214bcc0748b7f561c0cd3
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\80\8087378a675214bcc0748b7f561c0cd3
+    projectPath: Library\Artifacts\80\8087378a675214bcc0748b7f561c0cd3
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\81\8164a8f1b07640e1e898e9a166dc2ecd
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\81\8164a8f1b07640e1e898e9a166dc2ecd
+    projectPath: Library\Artifacts\81\8164a8f1b07640e1e898e9a166dc2ecd
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: ssb_dev\Library\Artifacts\84\843f0f561c5aa649b49344834e74aa0a
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\84\843f0f561c5aa649b49344834e74aa0a
     projectPath: Library\Artifacts\84\843f0f561c5aa649b49344834e74aa0a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\86\861c249fcdbf54c622cd0ca2094e16db
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\86\861c249fcdbf54c622cd0ca2094e16db
     projectPath: Library\Artifacts\86\861c249fcdbf54c622cd0ca2094e16db
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\8b\8bf420c4f9e685703c268eb733c4f059
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\8b\8bf420c4f9e685703c268eb733c4f059
-    projectPath: Library\Artifacts\8b\8bf420c4f9e685703c268eb733c4f059
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\8a\8a85ab5b47b420ef5ac904906827a69f
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\8a\8a85ab5b47b420ef5ac904906827a69f
+    projectPath: Library\Artifacts\8a\8a85ab5b47b420ef5ac904906827a69f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\8e\8e7c571ada9824aee9691ad076d73e8c
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\8e\8e7c571ada9824aee9691ad076d73e8c
-    projectPath: Library\Artifacts\8e\8e7c571ada9824aee9691ad076d73e8c
+  - path: ssb_dev\Library\Artifacts\96\961e1255af815d6ed0f038787bdcaa2c
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\96\961e1255af815d6ed0f038787bdcaa2c
+    projectPath: Library\Artifacts\96\961e1255af815d6ed0f038787bdcaa2c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\97\9717ed49e6abf92b508cff40a3ef4c1d
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\97\9717ed49e6abf92b508cff40a3ef4c1d
-    projectPath: Library\Artifacts\97\9717ed49e6abf92b508cff40a3ef4c1d
+  - path: ssb_dev\Library\Artifacts\9e\9ebce01a9b46e37031a7403ca293bec6
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9e\9ebce01a9b46e37031a7403ca293bec6
+    projectPath: Library\Artifacts\9e\9ebce01a9b46e37031a7403ca293bec6
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\9f\9f67c5d411b7af891b45eb22b83c42be
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9f\9f67c5d411b7af891b45eb22b83c42be
+    projectPath: Library\Artifacts\9f\9f67c5d411b7af891b45eb22b83c42be
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\9f\9f94bde11d1178244c53c41500270b8a
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\9f\9f94bde11d1178244c53c41500270b8a
+    projectPath: Library\Artifacts\9f\9f94bde11d1178244c53c41500270b8a
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -308,59 +554,71 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\a6\a6f7c1666680231c8de981e977cb9c5d
     projectPath: Library\Artifacts\a6\a6f7c1666680231c8de981e977cb9c5d
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\a8\a8044a8ada0bb71677e2a30f321a98f6
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\a8\a8044a8ada0bb71677e2a30f321a98f6
     projectPath: Library\Artifacts\a8\a8044a8ada0bb71677e2a30f321a98f6
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\a9\a9882a83525d4d37013f85345bcabc40
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\a9\a9882a83525d4d37013f85345bcabc40
-    projectPath: Library\Artifacts\a9\a9882a83525d4d37013f85345bcabc40
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\aa\aa2b44d446778502d8b7a3e218c4ba46
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\aa\aa2b44d446778502d8b7a3e218c4ba46
     projectPath: Library\Artifacts\aa\aa2b44d446778502d8b7a3e218c4ba46
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\b5\b5b39f85f536606b986902c0a15debef
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\b5\b5b39f85f536606b986902c0a15debef
+    projectPath: Library\Artifacts\b5\b5b39f85f536606b986902c0a15debef
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\b6\b640d6a0e9db2ddb987efb9a812a4c4d
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\b6\b640d6a0e9db2ddb987efb9a812a4c4d
+    projectPath: Library\Artifacts\b6\b640d6a0e9db2ddb987efb9a812a4c4d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\bb\bbeae41e586a94a6d08ab5435bf6871b
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\bb\bbeae41e586a94a6d08ab5435bf6871b
     projectPath: Library\Artifacts\bb\bbeae41e586a94a6d08ab5435bf6871b
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\bc\bcdda58c16bfa1d3a0d4ce28aa40a5d0
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\bc\bcdda58c16bfa1d3a0d4ce28aa40a5d0
-    projectPath: Library\Artifacts\bc\bcdda58c16bfa1d3a0d4ce28aa40a5d0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\bd\bd9617e0a9687c3363cb1ad76377f1de
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\bd\bd9617e0a9687c3363cb1ad76377f1de
-    projectPath: Library\Artifacts\bd\bd9617e0a9687c3363cb1ad76377f1de
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\c1\c15d6b99bedbf2c27fb036a96dd2de1e
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c1\c15d6b99bedbf2c27fb036a96dd2de1e
     projectPath: Library\Artifacts\c1\c15d6b99bedbf2c27fb036a96dd2de1e
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\c2\c244fd046790d7056ca380a5b5f4db81
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c2\c244fd046790d7056ca380a5b5f4db81
     projectPath: Library\Artifacts\c2\c244fd046790d7056ca380a5b5f4db81
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\c2\c2a8ff4e82516d465853ed3cd5d83f9a
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c2\c2a8ff4e82516d465853ed3cd5d83f9a
     projectPath: Library\Artifacts\c2\c2a8ff4e82516d465853ed3cd5d83f9a
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\c4\c41d4b48649f1d69799e70534913b8a5
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c4\c41d4b48649f1d69799e70534913b8a5
+    projectPath: Library\Artifacts\c4\c41d4b48649f1d69799e70534913b8a5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\c6\c62e6d560188ccbe35cfb3b26f2ceb89
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c6\c62e6d560188ccbe35cfb3b26f2ceb89
+    projectPath: Library\Artifacts\c6\c62e6d560188ccbe35cfb3b26f2ceb89
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\c9\c9e3c933c61b4a69fda1c72e9a1d18ef
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\c9\c9e3c933c61b4a69fda1c72e9a1d18ef
+    projectPath: Library\Artifacts\c9\c9e3c933c61b4a69fda1c72e9a1d18ef
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -368,11 +626,17 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\cb\cb817ebc28850301cfc9852c40ce00c8
     projectPath: Library\Artifacts\cb\cb817ebc28850301cfc9852c40ce00c8
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\cb\cbd12d0d797fbf3be0e6cbadfb705418
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\cb\cbd12d0d797fbf3be0e6cbadfb705418
     projectPath: Library\Artifacts\cb\cbd12d0d797fbf3be0e6cbadfb705418
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\d2\d217e93c1cdf5c244aabbdc779df6d84
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d2\d217e93c1cdf5c244aabbdc779df6d84
+    projectPath: Library\Artifacts\d2\d217e93c1cdf5c244aabbdc779df6d84
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -380,23 +644,41 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d4\d42846d4c2b37b4c4b62208bc02c7642
     projectPath: Library\Artifacts\d4\d42846d4c2b37b4c4b62208bc02c7642
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\d8\d83fc877d63e930b80285171ce961b7f
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d8\d83fc877d63e930b80285171ce961b7f
+    projectPath: Library\Artifacts\d8\d83fc877d63e930b80285171ce961b7f
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\d4\d43d80f714842f1915cffbd8a2e9fde6
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d4\d43d80f714842f1915cffbd8a2e9fde6
-    projectPath: Library\Artifacts\d4\d43d80f714842f1915cffbd8a2e9fde6
+  - path: ssb_dev\Library\Artifacts\d8\d862ea82b00fb0a3f76b3bd719efdce5
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d8\d862ea82b00fb0a3f76b3bd719efdce5
+    projectPath: Library\Artifacts\d8\d862ea82b00fb0a3f76b3bd719efdce5
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: ssb_dev\Library\Artifacts\e2\e21c446ea6f54922c4fdd6d502b9c1bb
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e2\e21c446ea6f54922c4fdd6d502b9c1bb
-    projectPath: Library\Artifacts\e2\e21c446ea6f54922c4fdd6d502b9c1bb
+  - path: ssb_dev\Library\Artifacts\d8\d88b830f234b9140e134ee02079d5bfe
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\d8\d88b830f234b9140e134ee02079d5bfe
+    projectPath: Library\Artifacts\d8\d88b830f234b9140e134ee02079d5bfe
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\e2\e258287b381979bea50c70450fc5489a
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e2\e258287b381979bea50c70450fc5489a
+    projectPath: Library\Artifacts\e2\e258287b381979bea50c70450fc5489a
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: ssb_dev\Library\Artifacts\e3\e375aa0756f6a88aec49dd84739ec6ce
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e3\e375aa0756f6a88aec49dd84739ec6ce
-    projectPath: Library\Artifacts\e3\e375aa0756f6a88aec49dd84739ec6ce
+  - path: ssb_dev\Library\Artifacts\e3\e374115c83f53f99d84636605e6683d3
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e3\e374115c83f53f99d84636605e6683d3
+    projectPath: Library\Artifacts\e3\e374115c83f53f99d84636605e6683d3
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ssb_dev\Library\Artifacts\e5\e5c874ac580029895e15f74c39eb6ed1
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e5\e5c874ac580029895e15f74c39eb6ed1
+    projectPath: Library\Artifacts\e5\e5c874ac580029895e15f74c39eb6ed1
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -404,17 +686,11 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e6\e684546b256dda90f73fdfa0afa2a0e4
     projectPath: Library\Artifacts\e6\e684546b256dda90f73fdfa0afa2a0e4
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\e8\e8df81a876c8a8e1fb1dda44985cd2ee
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\e8\e8df81a876c8a8e1fb1dda44985cd2ee
     projectPath: Library\Artifacts\e8\e8df81a876c8a8e1fb1dda44985cd2ee
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\ee\ee6ab8bfd1f7123b0052f32880010338
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\ee\ee6ab8bfd1f7123b0052f32880010338
-    projectPath: Library\Artifacts\ee\ee6ab8bfd1f7123b0052f32880010338
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -422,26 +698,20 @@ MonoBehaviour:
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\f0\f0119437ba0ea5786ad2f2e848dcbbde
     projectPath: Library\Artifacts\f0\f0119437ba0ea5786ad2f2e848dcbbde
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\Library\Artifacts\f3\f308806c10449fa3c2bbf64430ee7701
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\f3\f308806c10449fa3c2bbf64430ee7701
+    projectPath: Library\Artifacts\f3\f308806c10449fa3c2bbf64430ee7701
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\Artifacts\f0\f0d5f42bcbb2d05908c416dd1abdf8cf
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\f0\f0d5f42bcbb2d05908c416dd1abdf8cf
-    projectPath: Library\Artifacts\f0\f0d5f42bcbb2d05908c416dd1abdf8cf
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: ssb_dev\Library\Artifacts\f2\f20e5769b1776fa38ceadfe3a87d0c14
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\f2\f20e5769b1776fa38ceadfe3a87d0c14
-    projectPath: Library\Artifacts\f2\f20e5769b1776fa38ceadfe3a87d0c14
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
   - path: ssb_dev\Library\Artifacts\f5\f58171eee9d99aa7c4c174b0fcb067ed
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Artifacts\f5\f58171eee9d99aa7c4c174b0fcb067ed
     projectPath: Library\Artifacts\f5\f58171eee9d99aa7c4c174b0fcb067ed
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Library\Bee\1300b0aE.dag
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\Bee\1300b0aE.dag
     projectPath: Library\Bee\1300b0aE.dag
@@ -526,9 +796,21 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ssb_dev\Library\CurrentMaximizeLayout.dwlt
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\CurrentMaximizeLayout.dwlt
+    projectPath: Library\CurrentMaximizeLayout.dwlt
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: ssb_dev\Library\EditorInstance.json
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\expandedItems
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\expandedItems
+    projectPath: Library\expandedItems
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -568,6 +850,18 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ssb_dev\Library\InspectorExpandedItems.asset
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\LastSceneManagerSetup.txt
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\LastSceneManagerSetup.txt
+    projectPath: Library\LastSceneManagerSetup.txt
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: ssb_dev\Library\SceneVisibilityState.asset
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\SceneVisibilityState.asset
     projectPath: Library\SceneVisibilityState.asset
@@ -586,39 +880,21 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ssb_dev\Library\ShaderCache\0\0a777c6d9ea83bf5bf856a7cb15ee665.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\0\0a777c6d9ea83bf5bf856a7cb15ee665.bin
-    projectPath: Library\ShaderCache\0\0a777c6d9ea83bf5bf856a7cb15ee665.bin
+  - path: ssb_dev\Library\ShaderCache\6\61115f1c3f603b5330ee461f26b1ed81.bin
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\6\61115f1c3f603b5330ee461f26b1ed81.bin
+    projectPath: Library\ShaderCache\6\61115f1c3f603b5330ee461f26b1ed81.bin
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\ShaderCache\3\3d34394fc763707f1041f78000ed435f.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\3\3d34394fc763707f1041f78000ed435f.bin
-    projectPath: Library\ShaderCache\3\3d34394fc763707f1041f78000ed435f.bin
+  - path: ssb_dev\Library\ShaderCache\b\b673fc7dabcd44b78ea6194b90042cdc.bin
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\b\b673fc7dabcd44b78ea6194b90042cdc.bin
+    projectPath: Library\ShaderCache\b\b673fc7dabcd44b78ea6194b90042cdc.bin
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: ssb_dev\Library\ShaderCache\4\4e6fce7253d16347959132759a23c00d.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\4\4e6fce7253d16347959132759a23c00d.bin
-    projectPath: Library\ShaderCache\4\4e6fce7253d16347959132759a23c00d.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\ShaderCache\c\c48822c4bfc6d9008c57855f525585c7.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\c\c48822c4bfc6d9008c57855f525585c7.bin
-    projectPath: Library\ShaderCache\c\c48822c4bfc6d9008c57855f525585c7.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\ShaderCache\e\e0872580227852d908c57b2691b1352b.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\e\e0872580227852d908c57b2691b1352b.bin
-    projectPath: Library\ShaderCache\e\e0872580227852d908c57b2691b1352b.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\ShaderCache\e\ee644a3ee51cb771cdb040a8b1ff8e0e.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\e\ee644a3ee51cb771cdb040a8b1ff8e0e.bin
-    projectPath: Library\ShaderCache\e\ee644a3ee51cb771cdb040a8b1ff8e0e.bin
+  - path: ssb_dev\Library\ShaderCache\e\ed5519cc7ec7d1cf117d01ce3b98a634.bin
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\e\ed5519cc7ec7d1cf117d01ce3b98a634.bin
+    projectPath: Library\ShaderCache\e\ed5519cc7ec7d1cf117d01ce3b98a634.bin
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -628,18 +904,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ssb_dev\Library\ShaderCache\f\f37045768b4d2f5115b7096582c041c8.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\f\f37045768b4d2f5115b7096582c041c8.bin
-    projectPath: Library\ShaderCache\f\f37045768b4d2f5115b7096582c041c8.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ssb_dev\Library\ShaderCache\f\fb852f1c614d570a916e6a84d38729f3.bin
-    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\ShaderCache\f\fb852f1c614d570a916e6a84d38729f3.bin
-    projectPath: Library\ShaderCache\f\fb852f1c614d570a916e6a84d38729f3.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: ssb_dev\Library\SourceAssetDB
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
@@ -652,9 +916,21 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ssb_dev\Library\StateCache\PrefabStageHierarchy\a1\a1f1900fc700fdefc8cea07dc356d3bd.json
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\StateCache\PrefabStageHierarchy\a1\a1f1900fc700fdefc8cea07dc356d3bd.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\a1\a1f1900fc700fdefc8cea07dc356d3bd.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: ssb_dev\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
     projectPath: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\Library\UIElements\EditorWindows\UnityEditor.PackageManager.UI.PackageManagerWindow.pref
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Library\UIElements\EditorWindows\UnityEditor.PackageManager.UI.PackageManagerWindow.pref
+    projectPath: Library\UIElements\EditorWindows\UnityEditor.PackageManager.UI.PackageManagerWindow.pref
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -663,28 +939,40 @@ MonoBehaviour:
     projectPath: Logs\AssetImportWorker0.log
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
   - path: ssb_dev\Logs\AssetImportWorker0-prev.log
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Logs\AssetImportWorker0-prev.log
     projectPath: Logs\AssetImportWorker0-prev.log
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
   - path: ssb_dev\Logs\shadercompiler-AssetImportWorker0.log
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Logs\shadercompiler-AssetImportWorker0.log
     projectPath: Logs\shadercompiler-AssetImportWorker0.log
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
   - path: ssb_dev\Logs\shadercompiler-UnityShaderCompiler.exe1.log
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Logs\shadercompiler-UnityShaderCompiler.exe1.log
     projectPath: Logs\shadercompiler-UnityShaderCompiler.exe1.log
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: ssb_dev\Logs\shadercompiler-UnityShaderCompiler.exe2.log
     fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\Logs\shadercompiler-UnityShaderCompiler.exe2.log
     projectPath: Logs\shadercompiler-UnityShaderCompiler.exe2.log
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: ssb_dev\ProjectSettings\EditorBuildSettings.asset
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\ProjectSettings\EditorBuildSettings.asset
+    projectPath: ProjectSettings\EditorBuildSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ssb_dev\UserSettings\EditorUserSettings.asset
+    fullPath: C:\Users\Santiago\Desktop\spaceship_breaker_dev\ssb_dev\UserSettings\EditorUserSettings.asset
+    projectPath: UserSettings\EditorUserSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3

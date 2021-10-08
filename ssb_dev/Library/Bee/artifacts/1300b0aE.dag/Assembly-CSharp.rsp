@@ -330,6 +330,7 @@
 "Assets/BlockBreakerTemplate/Scripts/GameUI.cs"
 "Assets/BlockBreakerTemplate/Scripts/MenuUI.cs"
 "Assets/BlockBreakerTemplate/Scripts/Paddle.cs"
+"Assets/LevelLoader.cs"
 "Assets/Scripts/Enemy_Behaviour.cs"
 "Assets/Scripts/Environment_Behaviour.cs"
 "Assets/Scripts/Fleet_Behaviour.cs"
