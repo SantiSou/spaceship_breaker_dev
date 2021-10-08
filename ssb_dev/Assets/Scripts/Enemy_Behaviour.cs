@@ -17,14 +17,14 @@ public class Enemy_Behaviour : MonoBehaviour
     
     void Start()
     {
-        int enemySprite = Random.Range(0, 7);
+        // int enemySprite = Random.Range(0, 7);
         sideTouched = false;
 
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
         rb = GetComponent<Rigidbody2D> ();
 
         gameObject.name = "spaceship";
-        enemyPoints = System.Convert.ToInt32(spriteArray[enemySprite].ToString().Split('_')[1].Split(' ')[0]);
+        // enemyPoints = System.Convert.ToInt32(spriteArray[enemySprite].ToString().Split('_')[1].Split(' ')[0]);
 
     }
 
@@ -33,7 +33,13 @@ public class Enemy_Behaviour : MonoBehaviour
         time += Time.deltaTime;
 
         MovementControl();
+       
     }
+
+    void FixedUpdate() {
+
+        rb.velocity = gameObject.GetComponent<Enemy_Behaviour>().direction * manager.enemySpeed * Time.deltaTime;;
+    }    
 
     private void OnTriggerEnter2D(Collider2D other) {
 
@@ -52,7 +58,7 @@ public class Enemy_Behaviour : MonoBehaviour
                 
             }
         } else if (other.gameObject.name.Equals("spaceship") && !(gameObject.transform.parent==other.transform.parent.transform)) {
-
+            
             gameObject.transform.parent = other.transform.parent.transform;
             other.transform.parent.GetComponent<Fleet_Behaviour>().reArrangeFleet();
 
@@ -84,7 +90,5 @@ public class Enemy_Behaviour : MonoBehaviour
 
         gameObject.GetComponent<Enemy_Behaviour>().direction = new Vector3(gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValue, gameObject.transform.parent.gameObject.GetComponent<Fleet_Behaviour>().directionValueY, 0);                
 
-        stepVector = gameObject.GetComponent<Enemy_Behaviour>().direction * manager.enemySpeed * Time.deltaTime;
-        rb.velocity = stepVector;
     }    
 }

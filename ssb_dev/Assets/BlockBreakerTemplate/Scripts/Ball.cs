@@ -24,10 +24,14 @@ public class Ball : MonoBehaviour
 		direction = Vector2.down;				
 	}
 
-	void Update ()
-	{
+	void Update () {
 		MovementControl ();
 		gameObject.transform.SetParent(null);
+	}
+
+	void FixedUpdate () {
+		
+		rig.velocity = direction * manager.ballSpeed * Time.deltaTime; //Sets the object's rigidbody velocity to the direction multiplied by the speed
 	}
 
 	public void SetDirection (Vector3 target)
@@ -61,8 +65,6 @@ public class Ball : MonoBehaviour
 	}
 
 	void MovementControl () {
-
-		rig.velocity = direction * manager.ballSpeed * Time.deltaTime; //Sets the object's rigidbody velocity to the direction multiplied by the speed
 
 		if(transform.position.x > ((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x)*-1) && !goingLeft){
 			direction = new Vector2(-direction.x, direction.y);		
