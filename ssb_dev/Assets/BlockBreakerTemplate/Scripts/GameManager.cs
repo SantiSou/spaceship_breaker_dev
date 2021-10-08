@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
-	public int score;				//The player's current score
-	public int experience;
-	public int lives;				//The amount of lives the player has remaining
-	public int ballSpeedIncrement;	//The amount of speed the ball will increase by everytime it hits a brick
+	public int score;
+	public int lives;	
+	public int ballSpeedIncrement;
 	public int ballmaxSpeed;
 	public int timerSec;
 	public float faster;
@@ -22,15 +21,15 @@ public class GameManager : MonoBehaviour
 	public float time;
     public float enemyXPos;
     public float enemyYPos;
-	public bool gameOver;			//Set true when the game is over
-	public bool wonGame;			//Set true when the game has been won
+	public bool gameOver;		
+	public bool wonGame;			
 	public bool isFaster;
 	public int countPoints; 
     public int distanceTxtDiff;
     public string distanceTxt;
-	public GameObject paddlePrototype;		//The paddle game object
-	public GameObject ballPrototype;			//The ball game object
-	public GameUI gameUI;			//The GameUI class
+	public GameObject paddlePrototype;		
+	public GameObject ballPrototype;		
+	public GameUI gameUI;		
 	public GameObject enemyPrototype;
 	public GameObject fleetPrototype;
 	public GameObject spaceObjPrototype;
@@ -52,9 +51,12 @@ public class GameManager : MonoBehaviour
 	public float maxX;
 	public float maxXdelete;
 	public int actualLevel;	
+	public int experience;
+	public float experienceCap;
+	public float experienceFactor;
 	public float cameraX;
 	public float cameraY;
-    public Sprite[] spriteArray;
+    public GameObject[] spriteArray;
     SpriteRenderer spriteRenderer;
 	AudioSource audioSource;
 	public AudioClip createBallAudio;
@@ -68,7 +70,10 @@ public class GameManager : MonoBehaviour
 	public GameObject Distance_panel;
 	public GameObject distance;
 	public int countBalls;
+	public int maxBalls;
 	public int countEnemies;
+	public int maxEnemies;
+	public bool levelUp;
 
 	void Start ()
 	{
@@ -79,13 +84,9 @@ public class GameManager : MonoBehaviour
 	{
 		time += Time.deltaTime;
 
-		// generateEnvironment ();
 		updateScoreboard ();
-
-		if (countEnemies < actualLevel*5) {
-			int qty = (actualLevel*5) - countEnemies;
-            createEnemy (qty);
-		}
+		updateDifficulty ();
+		updateEnemies ();
 	}
 
 	public void StartGame ()
@@ -93,13 +94,18 @@ public class GameManager : MonoBehaviour
 	{		
 
 		GameObject mongo = Instantiate(MongoAPI);
-		
 
 		time = 0.0f;
-		actualLevel 	= 1;
-		countBalls		= 0;
-		countEnemies	= 0;
-		score 			= 0;
+		actualLevel 		= 1;
+		experience			= 0;
+		experienceFactor	= 0.2f;
+		experienceCap		= (actualLevel*100)+((actualLevel*100)*experienceFactor);
+		countBalls			= 0;
+		maxBalls			= 1;
+		countEnemies		= 0;
+		maxEnemies			= 4;
+		score 				= 0;
+		levelUp				= false;
 
 		audioSource = gameObject.GetComponent<AudioSource>();
 
@@ -109,7 +115,7 @@ public class GameManager : MonoBehaviour
 		print(cameraX);
 		print(cameraY);
 
-		createPadle ();
+		createPaddle ();
 
 		Canvas canvas 		= Instantiate(canvasPrototype);
 		RectTransform canvasRT = canvas.GetComponent<RectTransform>();
@@ -145,13 +151,6 @@ public class GameManager : MonoBehaviour
 
 	public void UpdatePoints () {
 
-		if (score > 1000) {
-
-			actualLevel = (int)(score/1000);
-
-		}
-		
-
 		pointsTxt = "";
 		for (pointsTxtDiff =  7 - score.ToString().Length; pointsTxtDiff > 0; pointsTxtDiff--) {
 
@@ -179,6 +178,40 @@ public class GameManager : MonoBehaviour
 		distance.GetComponent<Text>().text = distanceTxt;
 	}
 
+	public void updateDifficulty () {
+
+		int level = getActualLevel();
+
+		if (levelUp) {
+			if (level%2==0) {
+
+				if (maxEnemies < 20) {
+					maxEnemies++;
+				} else {
+					enemySpeed+=25;
+				}
+
+				if (maxBalls < 10) {
+					maxBalls++;
+				}
+			} else {
+				enemySpeed+=25;
+				ballSpeed+=5;
+			}
+			levelUp = false;
+		}
+
+	}
+
+	public void updateEnemies () {
+
+		if (countEnemies < maxEnemies) {
+			int qty = maxEnemies - countEnemies;
+            createEnemy (qty);
+		}
+
+	}
+
     public void createBall (GameObject obj) {
 
 		GameObject ballObject 			= Instantiate(ballPrototype);
@@ -194,7 +227,7 @@ public class GameManager : MonoBehaviour
 		GameObject fleetObject = Instantiate(fleetPrototype);
 		
 		enemyXPos = 0;//Random.Range(-2.5f, 2.5f);
-		enemyYPos = (cameraY * -1);
+		enemyYPos = (cameraY * -1)+1;
 
 		float firstEnemyXPos = enemyXPos;
 
@@ -218,21 +251,23 @@ public class GameManager : MonoBehaviour
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValueY = 0;
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValue = directionValue;
 
+		int amountCreated = 0;
         for (int i = 0; i < qty; i++) {
 
         	int enemySprite = Random.Range(0, spriteArray.Length);
 
-            GameObject enemyCopy = Instantiate(enemyPrototype);
+            GameObject enemyCopy = Instantiate(spriteArray[enemySprite]);
 			
         	spriteRenderer = enemyCopy.GetComponent<SpriteRenderer>();
-        	spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30
+        	// spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30
+            enemyCopy.transform.localScale = new Vector3(1f, 1f, 0); 
+            enemyCopy.transform.position = new Vector3(enemyXPos, enemyYPos, -1f);
         	Vector2 sizeSpriteRenderer = enemyCopy.GetComponent<SpriteRenderer>().sprite.bounds.size;
         	enemyCopy.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
 
-            enemyCopy.transform.localScale = new Vector3(1f, 1f, 0); 
-            enemyCopy.transform.position = new Vector3(enemyXPos, enemyYPos, -1f);
+			amountCreated++;
 
-			if (actualLevel%5==0) {
+			if (amountCreated%5==0) {
 
 				enemyXPos = firstEnemyXPos;
 				enemyYPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.y;
@@ -246,11 +281,12 @@ public class GameManager : MonoBehaviour
             enemyCopy.GetComponent<Enemy_Behaviour>().direction = new Vector3(directionValue, 0, 0);
 
 			enemyCopy.transform.parent = fleetObject.transform;
+
 			countEnemies++;
         }
     }	
 
-	void createPadle () {
+	void createPaddle () {
 
 		GameObject paddle = Instantiate(paddlePrototype);
 		numberPlayers = 1;
@@ -263,9 +299,18 @@ public class GameManager : MonoBehaviour
 
 	}
 
-	int getActualLevel (int experience) {
+	int getActualLevel () {
 
-		
+		experienceCap	= (actualLevel*100)+(actualLevel*experienceFactor);
+
+		if (experience >= experienceCap) {
+
+			actualLevel++;
+			experience = 0;
+			levelUp = true;
+		}
+
+		return actualLevel;
 
 	}
 }	
