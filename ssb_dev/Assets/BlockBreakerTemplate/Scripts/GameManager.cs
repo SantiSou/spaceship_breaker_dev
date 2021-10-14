@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     public string distanceTxt;
 	public GameObject paddlePrototype;		
 	public GameObject ballPrototype;		
-	public GameUI gameUI;		
 	public GameObject enemyPrototype;
 	public GameObject fleetPrototype;
 	public GameObject spaceObjPrototype;
@@ -45,7 +44,6 @@ public class GameManager : MonoBehaviour
 	public int pointsTxtDiff;
 	public string pointsTxt;
 	public int numberPlayers;
-    int enemyArray;
 	public float minX;
 	public float minXdelete;
 	public float maxX;
@@ -57,9 +55,13 @@ public class GameManager : MonoBehaviour
 	public float cameraX;
 	public float cameraY;
     public GameObject[] spriteArray;
+	public GameObject[] spaceshipArray;
+	public AudioClip playerEngine;
+	public AudioClip enemyEngine;
+	public AudioClip enemyExplosion;
+	public AudioClip enemyShoot;
+	public AudioClip ballBounce;
     SpriteRenderer spriteRenderer;
-	AudioSource audioSource;
-	public AudioClip createBallAudio;
 	public Canvas canvasPrototype;
 	public Text distanceText;
 	public Text pointsText; 
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour
 	public int countEnemies;
 	public int maxEnemies;
 	public bool levelUp;
+    public AudioSource audiosource;
 
 	void Start ()
 	{
@@ -86,7 +89,16 @@ public class GameManager : MonoBehaviour
 
 		updateScoreboard ();
 		updateDifficulty ();
-		updateEnemies ();
+		if (time>5) {
+			updateEnemies ();
+			time = 0;
+		}
+
+		if (GameObject.FindGameObjectsWithTag("Ball").Length < maxBalls && !ballCreated) {
+			ballCreated = true;
+			print(maxBalls);
+			StartCoroutine(shootBall(maxBalls-GameObject.FindGameObjectsWithTag("Ball").Length));
+		}	
 	}
 
 	public void StartGame ()
@@ -106,8 +118,7 @@ public class GameManager : MonoBehaviour
 		maxEnemies			= 4;
 		score 				= 0;
 		levelUp				= false;
-
-		audioSource = gameObject.GetComponent<AudioSource>();
+		audiosource = GameObject.Find("SoundEffects").GetComponent<AudioSource> ();
 
 		cameraX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x;
 		cameraY = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y;
@@ -127,7 +138,7 @@ public class GameManager : MonoBehaviour
 		print(Screen.width);
 		print(Screen.height);
 
-		backgroundRT.sizeDelta = new Vector2(canvas.GetComponent<CanvasScaler>().referenceResolution.x, canvas.GetComponent<CanvasScaler>().referenceResolution.y);
+		// backgroundRT.sizeDelta = new Vector2(canvas.GetComponent<CanvasScaler>().referenceResolution.x, canvas.GetComponent<CanvasScaler>().referenceResolution.yç
 		
 		scoreboard 		= canvas.transform.Find("Scoreboard").gameObject;
 		scoreboard.transform.position = new Vector3(0, (cameraY*-1), 0);
@@ -139,7 +150,7 @@ public class GameManager : MonoBehaviour
 
 		Distance_panel	= scoreboard.transform.Find("Distance_panel").gameObject;
 		distance		= Distance_panel.transform.Find("distance").gameObject;
-		distance.GetComponent<Text>().text = "0000000";
+		distance.GetComponent<Text>().text = "";
 
 		time = 0.0f;
 
@@ -147,6 +158,8 @@ public class GameManager : MonoBehaviour
 		ballCreated 			= false;
 		gameOver 				= false;
 		wonGame 				= false;
+
+		createEnemy (4);
 	}	
 
 	public void UpdatePoints () {
@@ -165,17 +178,8 @@ public class GameManager : MonoBehaviour
 
 	public void updateScoreboard () {
 
-		timerSec = (int)timer;
+		distance.GetComponent<Text>().text = actualLevel.ToString();
 
-		distanceTxt = "";
-		for (distanceTxtDiff =  7 - timerSec.ToString().Length; distanceTxtDiff > 0; distanceTxtDiff--) {
-
-			distanceTxt += "0";
-
-		}
-
-		distanceTxt += timerSec.ToString();
-		distance.GetComponent<Text>().text = distanceTxt;
 	}
 
 	public void updateDifficulty () {
@@ -188,14 +192,14 @@ public class GameManager : MonoBehaviour
 				if (maxEnemies < 20) {
 					maxEnemies++;
 				} else {
-					enemySpeed+=25;
+					enemySpeed+=0.01f;
 				}
 
-				if (maxBalls < 10) {
+				if (maxBalls < 3) {
 					maxBalls++;
 				}
 			} else {
-				enemySpeed+=25;
+				enemySpeed+=0.01f;
 				ballSpeed+=5;
 			}
 			levelUp = false;
@@ -214,42 +218,48 @@ public class GameManager : MonoBehaviour
 
     public void createBall (GameObject obj) {
 
-		GameObject ballObject 			= Instantiate(ballPrototype);
-		
-		ballObject.transform.position 	= new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
-		ballObject.active 				= true;
-		countBalls++;
+		if (countBalls < maxBalls) {
+
+			GameObject ballObject 			= Instantiate(ballPrototype);
+
+            audiosource.PlayOneShot(enemyShoot,0.5f);
+			
+			ballObject.transform.position 	= new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
+			ballObject.SetActive(true);
+			countBalls++;
+
+		}
 
 	}
 
     void createEnemy (int qty) {
 
 		GameObject fleetObject = Instantiate(fleetPrototype);
+
+        int directionValue = 0;
 		
-		enemyXPos = 0;//Random.Range(-2.5f, 2.5f);
-		enemyYPos = (cameraY * -1)+1;
+		if (Random.Range(0, 1) == 1f) {
+
+			enemyXPos = (cameraX*-1);
+            directionValue = -1;
+            goingLeft = true; 
+
+		} else {
+
+			enemyXPos = cameraX;
+            directionValue = 1;
+            goingRight = true; 
+
+		}
+
+		enemyYPos = (cameraY * -1)-1;
 
 		float firstEnemyXPos = enemyXPos;
 
-		fleetObject.GetComponent<Fleet_Behaviour>().enemyXPos = enemyXPos;
-		fleetObject.GetComponent<Fleet_Behaviour>().enemyYPos = enemyYPos;
-		
-        int directionRandom = Random.Range(0, 1);
-        int directionValue = 0;
-
-		enemyArray = 0;
-
-        if (directionRandom == 1) {
-            directionValue = 1;
-            goingRight = true; 
-        }
-        else {
-            directionValue = -1;
-            goingLeft = true; 
-        }
-
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValueY = 0;
 		fleetObject.GetComponent<Fleet_Behaviour>().directionValue = directionValue;
+		fleetObject.GetComponent<Fleet_Behaviour>().direction = new Vector3(directionValue, 0, 0);
+		fleetObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3(enemyXPos,(cameraY*-1),0f);   
 
 		int amountCreated = 0;
         for (int i = 0; i < qty; i++) {
@@ -257,11 +267,10 @@ public class GameManager : MonoBehaviour
         	int enemySprite = Random.Range(0, spriteArray.Length);
 
             GameObject enemyCopy = Instantiate(spriteArray[enemySprite]);
-			
-        	spriteRenderer = enemyCopy.GetComponent<SpriteRenderer>();
-        	// spriteRenderer.sprite = spriteArray[enemySprite];  // shaceships_0,6,12,18,24,30
-            enemyCopy.transform.localScale = new Vector3(1f, 1f, 0); 
-            enemyCopy.transform.position = new Vector3(enemyXPos, enemyYPos, -1f);
+
+            enemyCopy.transform.localScale = new Vector3(2f, 2f, 0); 
+            enemyCopy.transform.position = new Vector3(enemyXPos, (cameraY*-1), 0f);
+
         	Vector2 sizeSpriteRenderer = enemyCopy.GetComponent<SpriteRenderer>().sprite.bounds.size;
         	enemyCopy.GetComponent<BoxCollider2D>().size = sizeSpriteRenderer;
 
@@ -273,7 +282,7 @@ public class GameManager : MonoBehaviour
 				enemyYPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.y;
 
 			} else {
-				
+
 				enemyXPos += enemyCopy.GetComponent<BoxCollider2D>().bounds.size.x;
 
 			}
@@ -283,7 +292,7 @@ public class GameManager : MonoBehaviour
 			enemyCopy.transform.parent = fleetObject.transform;
 
 			countEnemies++;
-        }
+        }                                                                                                                           
     }	
 
 	void createPaddle () {
@@ -295,13 +304,13 @@ public class GameManager : MonoBehaviour
 		maxX = (cameraX * -1) - ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
 		maxXdelete = (cameraX * -1) + ((paddle.GetComponent<SpriteRenderer>().bounds.size.x/2)/2);
 
-		paddle.active = true;
+		paddle.SetActive(true);
 
 	}
 
 	int getActualLevel () {
 
-		experienceCap	= (actualLevel*100)+(actualLevel*experienceFactor);
+		experienceCap	= (actualLevel*100)+((actualLevel*100)*experienceFactor);
 
 		if (experience >= experienceCap) {
 
@@ -313,6 +322,22 @@ public class GameManager : MonoBehaviour
 		return actualLevel;
 
 	}
+
+	// void shootBall (int qty) {
+
+
+	// }
+
+    IEnumerator shootBall (int qty) {
+		
+		print("qty:"+qty.ToString());
+		spaceshipArray = GameObject.FindGameObjectsWithTag("spaceship");
+		for (int i = 0; i < qty; i++) {
+			yield return new WaitForSeconds(1);
+			createBall(spaceshipArray[Random.Range(0, (int)spaceshipArray.Length-1)]);
+		}
+		ballCreated = false;
+    } 	
 }	
 
 	// void generateEnvironment () {

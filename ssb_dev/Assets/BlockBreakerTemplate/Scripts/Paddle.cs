@@ -28,12 +28,16 @@ public class Paddle : MonoBehaviour
 	public GameObject paddlePrototype;
 	public GameManager manager;
 	public bool ballGenerated;
+    public AudioSource audiosource;
 
 
 	void Start ()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
 		ballGenerated = false;
+		audiosource = GameObject.Find("SoundEffects").GetComponent<AudioSource> ();
+		audiosource.clip = manager.playerEngine;
+		audiosource.Play();
 	}
 	void Update ()
 	{
@@ -47,8 +51,9 @@ public class Paddle : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if(col.gameObject.tag == "Ball"){					
-			col.gameObject.GetComponent<Ball>().SetDirection(transform.position);
+			col.gameObject.GetComponent<Ball>().SetDirection(gameObject);
 			col.gameObject.GetComponent<Ball>().ballCreated = true;
+			audiosource.PlayOneShot(manager.ballBounce, 0.5f);
 		}
 	}
 

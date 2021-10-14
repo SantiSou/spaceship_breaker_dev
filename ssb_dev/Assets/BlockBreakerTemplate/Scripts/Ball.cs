@@ -10,18 +10,24 @@ public class Ball : MonoBehaviour
 	public Rigidbody2D rig;			//The ball's Rigidbody 2D component
 	public GameManager manager;		//The GameManager
 	public Paddle paddle;		//The GameManager
+    public AudioSource audiosource;
 	public bool goingLeft;			//Set to true when the ball is going left
 	public bool goingDown;			//Set to true xwhen the ball is going down
 	public bool goingFaster;
 	public bool ballCreated;
+
+	// public Transform sparkle;
 	
 
 	void Start ()
 	{
 		ballCreated = false;
 		goingFaster = false;
-		manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();   
-		direction = Vector2.down;				
+		manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
+		audiosource = GameObject.Find("SoundEffects").GetComponent<AudioSource> ();
+		direction = Vector2.down;
+
+		// sparkle.GetComponent<ParticleSystem>().enableEmission = false;
 	}
 
 	void Update () {
@@ -34,19 +40,30 @@ public class Ball : MonoBehaviour
 		rig.velocity = direction * manager.ballSpeed * Time.deltaTime; //Sets the object's rigidbody velocity to the direction multiplied by the speed
 	}
 
-	public void SetDirection (Vector3 target)
+	// void OnTriggerEnter2D() {
+
+	// 	sparkle.GetComponent<ParticleSystem>().enableEmission = true;	
+	// 	StartCoroutine(stopSparkles());
+
+	// }
+
+	// IEnumerator stopSparkles() {
+
+	// 	yield return new WaitForSeconds (.1f);
+	// 	sparkle.GetComponent<ParticleSystem>().enableEmission = false;	
+
+	// }
+
+	public void SetDirection (GameObject target)
 	{
 		Vector2 dir = new Vector2();		
 
-		dir = transform.position - target;		
+		dir = transform.position - target.transform.position;		
 		dir.Normalize();						
 
 		direction = dir;						
 
-		manager.ballSpeed += manager.ballSpeedIncrement;    
-
-		// if(manager.ballSpeed > manager.ballmaxSpeed)					
-		// 	manager.ballSpeed = manager.ballmaxSpeed;					
+		// manager.ballSpeed += manager.ballSpeedIncrement;    				
 
 		if(dir.x > 0)							
 			goingLeft = false;
@@ -60,6 +77,7 @@ public class Ball : MonoBehaviour
 
 	public void DestroyBall () {
 
+		manager.countBalls--;	
 		Destroy(gameObject);
 
 	}
@@ -75,12 +93,10 @@ public class Ball : MonoBehaviour
 			goingLeft = false;										
 		}
 		if(transform.position.y > (((Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)*-1))){							
-			DestroyBall ();	
-			manager.countBalls--;													
+			DestroyBall ();													
 		}
 		if(transform.position.y < (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y)){								
-			DestroyBall ();		
-			manager.countBalls--;									
+			DestroyBall ();										
 		}	
 
 	}

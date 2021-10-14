@@ -11,6 +11,13 @@ public class Fleet_Behaviour : MonoBehaviour
     public float enemyYPos;
     public bool reArrange;
     public bool fleeCreated;
+    AudioSource audiosource;
+    Rigidbody2D rb; 
+    public Vector3 direction;
+    public bool sideTouched;
+    public bool inside;
+    Vector3 endPosition;
+    Vector3 startPosition;
 
     void Start() {
 
@@ -18,6 +25,11 @@ public class Fleet_Behaviour : MonoBehaviour
         enemyXPos = 0.0f;
         enemyYPos = 0.0f;
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
+        audiosource = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D> ();
+        sideTouched = false;
+        inside = false;
+        // gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((manager.cameraX),(manager.cameraY),0f);
 
     }
 
@@ -26,48 +38,48 @@ public class Fleet_Behaviour : MonoBehaviour
         if (transform.childCount < 1) {
             Destroy(gameObject);
         } 
-        
-        if (manager.countBalls < manager.maxBalls) {
-
-            foreach (Transform child in transform) {
-
-                if (Random.Range(0, 10) == 0) {
-                    manager.createBall(child.gameObject);
-                    break;
-                }
-
-            }
-        }
     }
 
-    public void reArrangeFleet () {
+    void FixedUpdate () {
+        
+        // gameObject.GetComponent<Fleet_Behaviour>().direction = new Vector3(directionValue, directionValueY, 0); 
+        MovementControl();
+        // rb.velocity = gameObject.GetComponent<Fleet_Behaviour>().direction * manager.enemySpeed * Time.deltaTime;
+    }
 
-        bool newLine = false;
-        int childQty = 0;
-        float firstXPos = 0.0f;
+    public void reArrangeFleet (GameObject spaceship) {
 
-        foreach (Transform child in transform) {
+        enemyXPos = transform.GetChild(transform.childCount-1).transform.position.x + spaceship.GetComponent<BoxCollider2D>().bounds.size.x;
+        enemyYPos = transform.GetChild(transform.childCount-1).transform.position.y;
 
-            childQty += 1;
-            if (childQty == 1) {
+        if (enemyXPos >= (manager.cameraX*-1) ) {
 
-                enemyXPos = child.transform.position.x;
-                enemyYPos = child.transform.position.y;
-
-                firstXPos = enemyXPos;
-
-            }
-            else if (childQty%5==0) {
-                enemyYPos += child.GetComponent<BoxCollider2D>().bounds.size.y;
-                enemyXPos = firstXPos;
-                newLine = true;
-            } else {
-
-                enemyXPos += child.GetComponent<BoxCollider2D>().bounds.size.x;
-            }
-
-            child.transform.position = new Vector3(enemyXPos, enemyYPos, child.transform.position.z);
+            enemyYPos = transform.GetChild(transform.childCount-1).transform.position.y - spaceship.GetComponent<BoxCollider2D>().bounds.size.y;
+            enemyXPos = transform.GetChild(0).transform.position.x;
             
         }
+
+        endPosition = new Vector3(enemyXPos, enemyYPos, spaceship.transform.position.z);
+        startPosition = new Vector3(spaceship.transform.position.x, spaceship.transform.position.y, spaceship.transform.position.z);
+
+        spaceship.transform.parent = gameObject.transform;
+        spaceship.transform.position = Vector3.Lerp(startPosition, endPosition, 5f);
+        
     }
+    
+    void MovementControl() {
+
+        if (sideTouched) {
+
+            gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3(gameObject.GetComponent<Fleet_Behaviour>().transform.position.x, (gameObject.GetComponent<Fleet_Behaviour>().transform.position.y-0.4f) , 0);
+            gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((gameObject.GetComponent<Fleet_Behaviour>().transform.position.x+(manager.enemySpeed*directionValue)), gameObject.GetComponent<Fleet_Behaviour>().transform.position.y , 0);
+            sideTouched = false;
+
+        } 
+        else {
+            
+            gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((gameObject.GetComponent<Fleet_Behaviour>().transform.position.x+(manager.enemySpeed*directionValue)), gameObject.GetComponent<Fleet_Behaviour>().transform.position.y , 0);
+
+        }
+    }    
 }
