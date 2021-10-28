@@ -11,8 +11,8 @@ public class PowerUp_Behaviour : MonoBehaviour
     Rigidbody2D rb; 
     public GameManager manager;
     // Start is called before the first frame update
-    void Start()
-    {
+
+    void Start() {
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
         rb = GetComponent<Rigidbody2D> ();
 
@@ -23,8 +23,7 @@ public class PowerUp_Behaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         stepVector = manager.enemySpeed * direction.normalized;
         rb.velocity = stepVector;
         if(transform.position.y < -5)

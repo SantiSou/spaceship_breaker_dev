@@ -12,12 +12,14 @@ public class Fleet_Behaviour : MonoBehaviour
     public bool reArrange;
     public bool fleeCreated;
     AudioSource audiosource;
-    Rigidbody2D rb; 
     public Vector3 direction;
     public bool sideTouched;
     public bool inside;
     Vector3 endPosition;
     Vector3 startPosition;
+    public GameObject[] positions;
+    public BoxCollider2D fleetBC;
+    // public List<position> positionsList = new List<position>();
 
     void Start() {
 
@@ -26,10 +28,11 @@ public class Fleet_Behaviour : MonoBehaviour
         enemyYPos = 0.0f;
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
         audiosource = GetComponent<AudioSource>();
-        rb = GetComponent<Rigidbody2D> ();
         sideTouched = false;
         inside = false;
         // gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((manager.cameraX),(manager.cameraY),0f);
+
+        // createGrid();
 
     }
 
@@ -37,49 +40,106 @@ public class Fleet_Behaviour : MonoBehaviour
 
         if (transform.childCount < 1) {
             Destroy(gameObject);
-        } 
+        }
+        else if (manager.gameOver) {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate () {
         
-        // gameObject.GetComponent<Fleet_Behaviour>().direction = new Vector3(directionValue, directionValueY, 0); 
         MovementControl();
-        // rb.velocity = gameObject.GetComponent<Fleet_Behaviour>().direction * manager.enemySpeed * Time.deltaTime;
     }
 
-    public void reArrangeFleet (GameObject spaceship) {
+    // public void reArrangeFleet (GameObject newShip, GameObject fleetShip) {
 
-        enemyXPos = transform.GetChild(transform.childCount-1).transform.position.x + spaceship.GetComponent<BoxCollider2D>().bounds.size.x;
-        enemyYPos = transform.GetChild(transform.childCount-1).transform.position.y;
-
-        if (enemyXPos >= (manager.cameraX*-1) ) {
-
-            enemyYPos = transform.GetChild(transform.childCount-1).transform.position.y - spaceship.GetComponent<BoxCollider2D>().bounds.size.y;
-            enemyXPos = transform.GetChild(0).transform.position.x;
+    //     foreach (position pos in positionsList) {
             
-        }
+    //         GameObject go = pos.go;
+    //         go.transform.position = new Vector3(pos.pos.x, pos.pos.y, 0);
+    //     }
+ 
+        // enemyXPos = transform.GetChild(transform.childCount-1).transform.position.x - (newShip.GetComponent<BoxCollider2D>().bounds.size.x);
+        // enemyYPos = transform.GetChild(transform.childCount-1).transform.position.y;
 
-        endPosition = new Vector3(enemyXPos, enemyYPos, spaceship.transform.position.z);
-        startPosition = new Vector3(spaceship.transform.position.x, spaceship.transform.position.y, spaceship.transform.position.z);
+        // if (enemyXPos >= (manager.cameraX*-1) || enemyXPos <= manager.cameraX) {
+            
+        //     enemyXPos = transform.GetChild(transform.childCount-1).transform.position.x;
+        //     enemyYPos = transform.GetChild(transform.childCount-1).transform.position.y - newShip.GetComponent<BoxCollider2D>().bounds.size.y;
 
-        spaceship.transform.parent = gameObject.transform;
-        spaceship.transform.position = Vector3.Lerp(startPosition, endPosition, 5f);
+        // }
+
+        // endPosition = new Vector3(enemyXPos, enemyYPos, newShip.transform.position.z);
+        // startPosition = new Vector3(newShip.transform.position.x, newShip.transform.position.y, newShip.transform.position.z);
+
+        // // Call function from Enemy_Behaviour in the Update function to achive this
+        // newShip.transform.position = Vector3.Lerp(startPosition, endPosition, 1f);
+
+        // newShip.transform.parent = gameObject.transform;
         
-    }
+    // }
     
     void MovementControl() {
 
-        if (sideTouched) {
+        if (!manager.gameOver) {
+            if (sideTouched) {
 
-            gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3(gameObject.GetComponent<Fleet_Behaviour>().transform.position.x, (gameObject.GetComponent<Fleet_Behaviour>().transform.position.y-0.4f) , 0);
-            gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((gameObject.GetComponent<Fleet_Behaviour>().transform.position.x+(manager.enemySpeed*directionValue)), gameObject.GetComponent<Fleet_Behaviour>().transform.position.y , 0);
-            sideTouched = false;
+                gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3(gameObject.GetComponent<Fleet_Behaviour>().transform.position.x, (gameObject.GetComponent<Fleet_Behaviour>().transform.position.y-0.8f) , 0);
+                gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((gameObject.GetComponent<Fleet_Behaviour>().transform.position.x+(manager.enemySpeed*directionValue)), gameObject.GetComponent<Fleet_Behaviour>().transform.position.y , 0);
+                sideTouched = false;
 
-        } 
-        else {
-            
-            gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((gameObject.GetComponent<Fleet_Behaviour>().transform.position.x+(manager.enemySpeed*directionValue)), gameObject.GetComponent<Fleet_Behaviour>().transform.position.y , 0);
+            } 
+            else {
+                
+                gameObject.GetComponent<Fleet_Behaviour>().transform.position = new Vector3((gameObject.GetComponent<Fleet_Behaviour>().transform.position.x+(manager.enemySpeed*directionValue)), gameObject.GetComponent<Fleet_Behaviour>().transform.position.y , 0);
 
+            }
         }
-    }    
+    }
+
+    public void changeParent (GameObject newParent) {
+
+        foreach (Transform child in transform) {
+            child.transform.parent = newParent.transform;
+        }
+
+    }
+
+    // public void assignPosition (GameObject newShip) {
+
+    //     foreach (position pos in positionsList) {
+    //         if (pos.availavle) {
+    //             pos.go = newShip;
+    //             break;
+    //         }
+    //     }
+    //     reArrangeFleet();
+    // }
+
+	// void createGrid () {
+		
+	// 	float x = 0.0f;
+	// 	float y = 0.0f;		
+		
+	// 	for (int i=1; i<=20; i++) {
+			
+	// 		position position = new position();
+    //         position.go = null;
+	// 		position.pos = new Vector2(x, y);
+	// 		position.availavle = true;
+	// 		positionsList.Add(position);
+			
+	// 		if (x < (0.4f*4)) {
+	// 			x+= 0.4f;
+	// 		} else {
+	// 			x = 0.0f;
+	// 			y+= 0.4f;
+	// 		}
+	// 	}
+	// }
+	// public class position {
+    //     public GameObject go;
+	// 	public Vector2 pos;
+	// 	public bool availavle;
+	// }        
 }

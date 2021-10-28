@@ -13,16 +13,14 @@ public class Star_Behaviour : MonoBehaviour
     Vector3 stepVector;
     Rigidbody2D rb;    
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
         rb = GetComponent<Rigidbody2D> ();
         
     }
 
     // Update is called once per frame
-    void Update()
-    {      
+    void Update() {      
 
         stepVector = manager.spaceObjSpeed * direction.normalized;
 

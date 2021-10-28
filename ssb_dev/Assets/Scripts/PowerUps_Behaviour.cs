@@ -6,20 +6,19 @@ public class PowerUps_Behaviour : MonoBehaviour
 {
     public GameObject powerUpPrototype;
     public GameManager manager;
-    void Start()
-    {
+
+    void Start() {
         manager = GameObject.Find("Game Manager").GetComponent<GameManager> ();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (Random.Range(0,1000) == 1) { // Condición para generar enemigos		
             createPowerUp ();
         }        
     }
-    void createPowerUp ()
-    {
+
+    void createPowerUp () {
         float powerUpXPos = Random.Range(-2.6f, 2.7f);
         float powerUpYPos = 5;
 

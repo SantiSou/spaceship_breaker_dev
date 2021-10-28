@@ -1,12 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class MongoAPI : MonoBehaviour
 {
-    void Start()
-    {
+    public UnityWebRequest uwr;
+    public MainMenu mainMenu;
+    public InGameMenu inGameMenu;
+    public scoreItem[] scoreItems;
+    public int lastpoints;
+
+    void Start() {
 
         // Player playerInstance = new Player();
         // playerInstance.username = "test2";
@@ -18,28 +25,80 @@ public class MongoAPI : MonoBehaviour
         // requestMDB request = new requestMDB();
         // request.username = "test";
         // request.points = "0";
-        // request.geolocation = "";
         // request.datetime = "2021-10-04 00:00:00";
         
     }
 
-    void Update()
-    {
+    public void GetLastPoints() {
+
+        StartCoroutine(request_lastscore("http://mongoapi-ssb.herokuapp.com/users/lastscore", "GET", ""));
+
+        if (SceneManager.GetActiveScene().buildIndex != 0) {
+            inGameMenu = GameObject.Find("Canvas(Clone)").GetComponent<InGameMenu> ();
+        }
+    }
+
+    public void SaveScore(string nickname, string points) {
+
+        saveScore score = new saveScore();
+        score.nickname = nickname;
+        score.points = points;
+        Debug.Log(score.nickname);
+        StartCoroutine(request_saveHighscores("http://mongoapi-ssb.herokuapp.com/users/savehighscore", "POST", score));
+
+    }
+
+    public UnityWebRequest GetDatabase() {
+
+        StartCoroutine(request_getHighscores("http://mongoapi-ssb.herokuapp.com/users/gethighscores", "GET", ""));
         
+        if (SceneManager.GetActiveScene().buildIndex == 0) {
+            mainMenu = GameObject.Find("MainMenu").GetComponent<MainMenu> ();
+        }
+        else {
+            inGameMenu = GameObject.Find("Canvas(Clone)").GetComponent<InGameMenu> ();
+        }        
+
+        return uwr;
+
     }
 
-    public void UploadMDB(string url, string request) {
-
-        StartCoroutine(Upload("<ip>/<route>/", request));
-
-    }
-
-    IEnumerator Upload(string url, string request) {
+    IEnumerator request_getHighscores(string url, string method, string request) {
 
         string requestToJson = JsonUtility.ToJson(request);
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(requestToJson);
 
-        var uwr = new UnityWebRequest(url, "POST");
+        uwr = new UnityWebRequest(url, method);
+        uwr.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        uwr.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        uwr.SetRequestHeader("Content-Type", "application/json");
+
+        yield return uwr.SendWebRequest();
+ 
+        if(uwr.isNetworkError) {
+            Debug.Log(uwr.error);
+        }
+        else {
+                      
+            if (SceneManager.GetActiveScene().buildIndex == 0) {
+                mainMenu.updateLeaderboard(uwr.downloadHandler.text);
+            }
+            else {
+                inGameMenu.updateLeaderboard(uwr.downloadHandler.text);
+            }
+
+            // Debug.Log(uwr.downloadHandler.text);
+ 
+            byte[] results = uwr.downloadHandler.data;
+        }
+    } 
+
+    IEnumerator request_saveHighscores(string url, string method, saveScore request) {
+
+        string requestToJson = JsonUtility.ToJson(request);
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(requestToJson);
+
+        uwr = new UnityWebRequest(url, method);
         uwr.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
         uwr.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         uwr.SetRequestHeader("Content-Type", "application/json");
@@ -51,18 +110,55 @@ public class MongoAPI : MonoBehaviour
         }
         else {
             
-            Debug.Log(uwr.downloadHandler.text);
+            Debug.Log(uwr.downloadHandler.data);
  
             byte[] results = uwr.downloadHandler.data;
         }
-    }   
+    }  
 
-    public class requestMDB {
+    IEnumerator request_lastscore(string url, string method, string request) {
+
+        string requestToJson = JsonUtility.ToJson(request);
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(requestToJson);
+
+        uwr = new UnityWebRequest(url, method);
+        uwr.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        uwr.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        uwr.SetRequestHeader("Content-Type", "application/json");
+
+        yield return uwr.SendWebRequest();
+ 
+        if(uwr.isNetworkError) {
+            Debug.Log(uwr.error);
+        }
+        else {
+
+            inGameMenu.SubmitScoreAvailable(uwr.downloadHandler.text);
+ 
+            byte[] results = uwr.downloadHandler.data;
+        }
+    }       
+    
+    public class saveScore {
+
+        public string nickname;
+        public string points;
+
+    }
+
+    [Serializable]
+    public class scoreItem {
 
         public string username;
         public string points;
-        public string geolocation;
-        public string datetime;        
+        public string datetime;   
 
-    } 
+    }    
+
+    [Serializable]
+    public class scoreItemCollection
+    {
+        [SerializeField]
+        public scoreItem[] sprites;
+    }    
 }
